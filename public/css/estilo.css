@@ -1,26 +1,39 @@
-* { box-sizing: border-box; }
+:root {
+    --bg-color: #FDFBF7;
+    --text-color: #1A1A1A;
+    --accent-coral: #E68A7E;
+    --card-bg: #FFFFFF;
+    --border-radius: 20px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
 
 body {
-font-family: Arial, sans-serif;
-margin: 0;
-color: #222;
-background: #f5f6f8;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.5;
 }
 
-.topo {
-display: flex;
-align-items: center;
-gap: 1rem;
-padding: 0.75rem 1.5rem;
-background: #1f3864;
-}
-.topo a { color: #fff; margin-right: 1rem; text-decoration: none; }
+.header { padding: 20px 5%; background-color: var(--bg-color); }
+.nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+.logo { display: flex; align-items: center; gap: 10px; font-size: 1.2rem; font-weight: bold; }
+.logo img { height: 35px; }
+.nav-links { display: flex; gap: 30px; }
+.nav-links a { color: var(--text-color); text-decoration: none; font-size: 0.95rem; }
+.nav-auth { display: flex; gap: 15px; align-items: center; }
+.btn-dark { background-color: #1A1A1A; color: #FFF; padding: 10px 20px; border-radius: 30px; text-decoration: none; font-weight: 500; }
 
-main { max-width: 720px; margin: 2rem auto; padding: 0 1rem; }
+.hero-section { max-width: 1200px; margin: 40px auto; padding: 0 5%; display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+.badge-sub { font-size: 0.75rem; font-weight: bold; color: var(--accent-coral); letter-spacing: 1px; text-transform: uppercase; }
+.hero-content h1 { font-size: 3.5rem; line-height: 1.1; margin: 15px 0; font-weight: 900; }
+.hero-image-card { background-color: #F4EBE1; border-radius: var(--border-radius); padding: 20px; position: relative; }
+.hero-image-card img { width: 100%; border-radius: 15px; object-fit: cover; }
 
-label { display: block; margin-top: 1rem; }
-input { width: 100%; padding: 0.5rem; }
-button { margin-top: 1rem; padding: 0.5rem 1.25rem; }
-
-.erro { color: #b00020; margin: 0.25rem 0 0; }
-.lista li { margin: 0.5rem 0; }
+.footer { border-top: 1px solid #EBE7DF; padding: 60px 5% 30px 5%; margin-top: 80px; }
+.footer-container { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+.footer-bottom { max-width: 1200px; margin: 0 auto; border-top: 1px solid #EBE7DF; padding-top: 20px; font-size: 0.85rem; color: #777; text-align: center; }
