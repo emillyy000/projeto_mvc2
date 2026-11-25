@@ -11,3 +11,27 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+// FILTROS DA PÁGINA DE CONTEÚDOS
+
+document.addEventListener('DOMContentLoaded', () => {
+    const filtros = document.querySelectorAll('.filtro');
+    const cards = document.querySelectorAll('.conteudo-card');
+
+    filtros.forEach(filtro => {
+        filtro.addEventListener('click', () => {
+            const categoria = filtro.dataset.filter;
+
+            filtros.forEach(f => f.classList.remove('active'));
+            filtro.classList.add('active');
+
+            cards.forEach(card => {
+                if (categoria === 'todos' || card.dataset.category === categoria) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    });
+});
