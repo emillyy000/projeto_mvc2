@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Models;
 
 use PDO;
@@ -9,9 +10,14 @@ class Database
 
     public static function connect(): PDO
     {
+        if (self::$pdo !== null) {
+            return self::$pdo;
+        }
+
         $db = require __DIR__ . '/../../config/database.php';
-        return self::$pdo ??= new PDO(
-            "mysql:host={$db['host']};dbname={$db['name']};charset={$db['charset']}",
+
+        self::$pdo = new PDO(
+            "mysql:host={$db['host']};port={$db['port']};dbname={$db['name']};charset={$db['charset']}",
             $db['user'],
             $db['pass'],
             [
@@ -19,5 +25,7 @@ class Database
                 PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
             ]
         );
+
+        return self::$pdo;
     }
 }
