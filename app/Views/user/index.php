@@ -30,6 +30,8 @@
 
 <section class="features-section">
 
+    <div class="container">
+
     <span class="section-subtitle">O QUE VOCÊ ENCONTRA</span>
 
     <h2>TUDO PARA CUIDAR DA SUA ALIMENTAÇÃO</h2>
@@ -91,6 +93,7 @@
     </div>
 
 </div>
+    </div>
 </section>
 
 <!-- COMO FUNCIONA -->
