@@ -17,8 +17,8 @@
         <div class="nav-container">
 
             <div class="logo">
-                <img src="<?= asset('img/logo.png') ?>" alt="UpNutri Logo">
-                <span>UP <strong>NUTRI</strong></span>
+                <img src="<?= asset('img/logo_site.png') ?>" alt="UpNutri Logo">
+               
             </div>
 
             <nav class="nav-links">
@@ -45,8 +45,8 @@
 
             <div class="footer-col">
                 <div class="logo">
-                    <img src="<?= asset('img/logo.png') ?>" alt="UpNutri Logo">
-                    <span>UP <strong>NUTRI</strong></span>
+                    <img src="<?= asset('img/logo_site.png') ?>" alt="UpNutri Logo">
+                    
                 </div>
 
                 <p>

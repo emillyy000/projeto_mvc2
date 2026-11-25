@@ -1,0 +1,1 @@
+<img src="<?= asset('img/logonutriup.png') ?>" alt="Logo UpNutri" width="40" height="40">
