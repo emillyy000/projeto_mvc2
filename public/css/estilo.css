@@ -159,140 +159,112 @@ body {
         grid-column: auto;
     }
 }
-/* ===== PÁGINA DE CONTEÚDOS ===== */
-
-.conteudos-page {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 50px 5%;
+.conteudos-page .conteudo-card p {
+    margin: 0;
+    color: #827671;
+    font-size: .95rem;
+    line-height: 1.75;
 }
 
-.conteudos-header {
-    margin-bottom: 35px;
-}
-
-.conteudos-header h1 {
-    font-size: 2.8rem;
-    margin: 10px 0;
-    font-weight: 900;
-}
-
-.conteudos-header p {
-    color: #777;
-    font-size: 1.1rem;
-}
-
-.conteudos-filtros {
-    display: flex;
-    gap: 12px;
-    margin-bottom: 35px;
-    flex-wrap: wrap;
-}
-
-.filtro {
-    border: none;
-    background: #F4EBE1;
-    color: #555;
-    padding: 12px 20px;
-    border-radius: 30px;
-    cursor: pointer;
-    font-size: 0.95rem;
-    transition: 0.3s;
-}
-
-.filtro:hover {
-    background: #E68A7E;
-    color: white;
-}
-
-.filtro.active {
-    background: #1A1A1A;
-    color: white;
-}
-
-.conteudos-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-}
-
-.conteudo-card {
-    background: #fff;
-    border-radius: 28px;
-    overflow: hidden;
-    border: 1px solid #E8E0D6;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.conteudo-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 25px rgba(0,0,0,0.08);
-}
-
-.conteudo-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    display: block;
-}
-
-.conteudo-card-body {
-    padding: 22px;
-}
-
-.conteudo-tag {
-    display: inline-block;
-    background: #FCEBCB;
-    padding: 5px 12px;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    margin-bottom: 15px;
-}
-
-.conteudo-card h2 {
-    font-size: 1.35rem;
-    margin-bottom: 10px;
-    line-height: 1.3;
-}
-
-.conteudo-card p {
-    color: #777;
-    line-height: 1.6;
-}
-
-.conteudo-card-numero {
-    height: 200px;
-    background: linear-gradient(135deg, #FCEBCB, #FADBD5);
+/* Capas ilustradas dos cartões de dicas, sem alterar HTML */
+.conteudos-page .conteudo-card-numero {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #C76B60;
+    overflow: hidden;
+    height: 210px;
+    background: linear-gradient(135deg, #ffe1df, #fff2e1);
+    color: #d68581;
+    font-size: 3.7rem;
+    font-weight: 900;
+    letter-spacing: -.055em;
+}
+.conteudos-page .conteudo-card-numero::before {
+    content: "✿";
+    position: absolute;
+    top: -41px;
+    left: -20px;
+    color: rgba(255, 255, 255, .52);
+    font-size: 10rem;
+    font-weight: 400;
+    line-height: 1;
+    transform: rotate(-18deg);
+}
+.conteudos-page .conteudo-card-numero::after {
+    content: "♡";
+    position: absolute;
+    right: 27px;
+    bottom: 13px;
+    color: rgba(194, 114, 107, .40);
     font-size: 3rem;
-    font-weight: bold;
+    font-weight: 400;
+    transform: rotate(12deg);
+}
+.conteudos-page .conteudo-card:nth-child(5) .conteudo-card-numero {
+    background: linear-gradient(135deg, #ffefd7, #ffe0e2);
+    color: #bb8a68;
+}
+.conteudos-page .conteudo-card:nth-child(6) .conteudo-card-numero {
+    background: linear-gradient(135deg, #fde8ed, #fff6e6);
+    color: #c7859b;
 }
 
-/* RESPONSIVIDADE */
-
-@media (max-width: 900px) {
-    .conteudos-grid {
-        grid-template-columns: repeat(2, 1fr);
+/* Tablets e celulares */
+@media (max-width: 980px) {
+    .conteudos-page .conteudos-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
-
-@media (max-width: 600px) {
+@media (max-width: 620px) {
     .conteudos-page {
-        padding: 30px 5%;
+        padding: 54px 5% 76px;
     }
-
-    .conteudos-header h1 {
-        font-size: 2rem;
+    .conteudos-page::before,
+    .conteudos-page::after {
+        opacity: .28;
+        font-size: 50px;
     }
-
-    .conteudos-grid {
+    .conteudos-page .conteudos-header {
+        margin-bottom: 28px;
+    }
+    .conteudos-page .conteudos-header h1 {
+        font-size: clamp(2rem, 8.8vw, 2.9rem);
+    }
+    .conteudos-page .conteudos-filtros {
+        gap: 8px;
+        margin-bottom: 25px;
+        padding: 9px;
+        border-radius: 20px;
+    }
+    .conteudos-page .filtro {
+        flex: 1 1 auto;
+        padding: 10px 15px;
+        font-size: .88rem;
+    }
+    .conteudos-page .conteudos-grid {
         grid-template-columns: 1fr;
+        gap: 17px;
+    }
+    .conteudos-page .conteudo-card img,
+    .conteudos-page .conteudo-card-numero {
+        height: 195px;
+    }
+    .conteudos-page .conteudo-card-body {
+        padding: 20px 21px 25px;
     }
 }
+@media (prefers-reduced-motion: reduce) {
+    .conteudos-page .conteudo-card,
+    .conteudos-page .filtro {
+        transition: none;
+    }
+    .conteudos-page .conteudo-card:hover,
+    .conteudos-page .filtro:hover {
+        transform: none;
+    }
+}
+/* ===== FIM DA PÁGINA DE CONTEÚDOS ===== */
 
 /* Página de Login */
 .login-page {
