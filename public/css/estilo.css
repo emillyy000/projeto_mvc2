@@ -634,3 +634,261 @@ body {
     height: 24px;
     object-fit: contain;
 }
+
+/* COMO FUNCIONA */
+.how-section {
+    max-width: 1200px;
+    margin: 100px auto;
+    padding: 0 5%;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.how-images {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.how-image {
+    overflow: hidden;
+    border-radius: 30px;
+    flex: 1;
+}
+
+.image-one {
+    height: 370px;
+}
+
+.image-two {
+    height: 320px;
+    margin-top: 70px;
+}
+
+.how-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.how-content h2 {
+    font-size: 2.8rem;
+    margin: 15px 0 35px;
+}
+
+.step {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 25px;
+    align-items: flex-start;
+}
+
+.step-number {
+    font-size: 2.5rem;
+    color: #E68A7E;
+    font-weight: bold;
+}
+
+.step h3 {
+    margin: 5px 0;
+}
+
+.step p {
+    margin: 0;
+    color: #777;
+}
+
+/* CHAMADA FINAL */
+.cta-section {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 50px;
+    background: #171210;
+    color: white;
+    border-radius: 35px;
+}
+
+.cta-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.cta-content h2 {
+    font-size: 3rem;
+    margin: 0 0 10px;
+}
+
+.cta-content p {
+    color: #ccc;
+    margin: 0;
+}
+
+.cta-button {
+    background: #E68A7E;
+    color: #171210;
+    text-decoration: none;
+    padding: 18px 30px;
+    border-radius: 40px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+/* CELULAR */
+@media (max-width: 768px) {
+    .how-section {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .how-images {
+        height: 300px;
+    }
+
+    .image-one,
+    .image-two {
+        height: 260px;
+        margin-top: 0;
+    }
+
+    .how-content h2 {
+        font-size: 2rem;
+    }
+
+    .cta-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .cta-content h2 {
+        font-size: 2rem;
+    }
+
+    .cta-section {
+        margin: 50px 5%;
+        padding: 30px;
+    }
+}
+
+/* CHAMADA PARA CRIAR CONTA */
+.cta-section {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 45px;
+    background-color: #171210;
+    color: #fff;
+    border-radius: 35px;
+}
+
+.cta-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.cta-text h2 {
+    font-size: 3rem;
+    margin: 0 0 10px;
+    font-family: inherit;
+}
+
+.cta-text p {
+    color: #d0c9c5;
+    margin: 0;
+    font-size: 1rem;
+}
+
+.cta-button {
+    background-color: #E68A7E;
+    color: #171210;
+    padding: 18px 35px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+
+.cta-button:hover {
+    background-color: #f19b90;
+    transform: translateY(-3px);
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+    .cta-section {
+        margin: 50px 5%;
+        padding: 30px;
+    }
+
+    .cta-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .cta-text h2 {
+        font-size: 2rem;
+    }
+}
+
+/* BOTÕES DA PÁGINA INICIAL */
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.hero-buttons a {
+    text-decoration: none;
+    border-radius: 50px;
+    padding: 17px 32px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    transition: all 0.3s ease;
+}
+
+/* BOTÃO COMEÇAR AGORA */
+.hero-btn-primary {
+    background-color: #171210;
+    color: #ffffff;
+}
+
+.hero-btn-primary:hover {
+    background-color: #302522;
+    transform: translateY(-2px);
+}
+
+/* BOTÃO VER CONTEÚDOS */
+.hero-btn-secondary {
+    background-color: #FCEBCF;
+    color: #171210;
+}
+
+.hero-btn-secondary:hover {
+    background-color: #F5DDB5;
+    transform: translateY(-2px);
+}
+
+/* AJUSTE PARA CELULAR */
+@media (max-width: 500px) {
+    .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero-buttons a {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}

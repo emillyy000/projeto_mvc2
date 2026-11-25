@@ -4,9 +4,14 @@
         <h1>MAIS EQUILÍBRIO, MAIS SAÚDE, MAIS VOCÊ.</h1>
         <p>O NutriUp acompanha sua alimentação, calcula seus indicadores e mostra sua evolução — para você criar hábitos saudáveis sem complicação.</p>
         <div class="hero-buttons">
-            <a href="<?= url('register') ?>" class="btn-black">Começar agora &rarr;</a>
-            <a href="<?= url('conteudos') ?>" class="btn-light">Ver conteúdos</a>
-        </div>
+    <a href="<?= url('user/create') ?>" class="hero-btn-primary">
+        Começar agora <span>→</span>
+    </a>
+
+    <a href="<?= url('conteudos') ?>" class="hero-btn-secondary">
+        Ver conteúdos
+    </a>
+</div>
     </div>
     <div class="hero-image-card">
         <div class="image-wrapper">
@@ -82,4 +87,63 @@
     </div>
 
 </div>
+</section>
+
+<!-- COMO FUNCIONA -->
+<section class="how-section">
+
+    <div class="how-images">
+        <div class="how-image image-one">
+            <img src="<?= asset('img/refeiçao_saudavel.png') ?>" alt="Refeição equilibrada">
+        </div>
+
+        <div class="how-image image-two">
+            <img src="<?= asset('img/alimentos.png') ?>" alt="Alimentos variados">
+        </div>
+    </div>
+
+    <div class="how-content">
+        <span class="section-subtitle">COMO FUNCIONA</span>
+
+        <h2>TRÊS PASSOS PARA COMEÇAR</h2>
+
+        <div class="step">
+            <span class="step-number">01</span>
+            <div>
+                <h3>CRIE SUA CONTA</h3>
+                <p>Cadastre suas informações para começar a usar o NutriUp.</p>
+            </div>
+        </div>
+
+        <div class="step">
+            <span class="step-number">02</span>
+            <div>
+                <h3>CONHEÇA SEUS OBJETIVOS</h3>
+                <p>Explore as ferramentas e informações disponíveis para você.</p>
+            </div>
+        </div>
+
+        <div class="step">
+            <span class="step-number">03</span>
+            <div>
+                <h3>REGISTRE E APRENDA</h3>
+                <p>Acompanhe seus registros e aprenda sobre hábitos saudáveis.</p>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!-- CHAMADA PARA CRIAR CONTA -->
+<section class="cta-section">
+    <div class="cta-content">
+        <div class="cta-text">
+            <h2>VAMOS SUBIR DE NÍVEL?</h2>
+            <p>Crie sua conta gratuita e faça seu primeiro registro hoje.</p>
+        </div>
+
+        <a href="<?= url('user/create') ?>" class="cta-button">
+            Criar minha conta <span>→</span>
+        </a>
+    </div>
 </section>
