@@ -528,10 +528,12 @@ body {
 /* ===== SEÇÃO O QUE VOCÊ ENCONTRA ===== */
 
 .features-section {
-    background-color: #FDF6EC;
+    background-color: #FBEAE6;
     padding: 80px 7%;
-    max-width: 1200px;
-    margin: 0 auto;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 .section-subtitle {
