@@ -18,7 +18,11 @@ body {
     color: var(--text-color);
     line-height: 1.5;
 }
-.header { padding: 20px 5%; background-color: var(--bg-color); }
+.header {
+    padding: 12px 5%;
+    background-color: #FBEAE6;
+    border-bottom: 1px solid #F3D2CC;
+}
 .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
 .logo { display: flex; align-items: center; gap: 10px; font-size: 1.2rem; font-weight: bold; }
 .logo img {
@@ -929,4 +933,8 @@ body {
     .hero-buttons a {
         text-align: center;
     }
+}
+
+.texto-rosa {
+    color: #E68A7E;
 }
