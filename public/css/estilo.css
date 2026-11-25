@@ -1107,3 +1107,209 @@ body {
         font-size: 30px;
     }
 }
+
+/* ===== PAGINA CRIAR CONTA ===== */
+
+.auth-page {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+}
+
+/* Imagem */
+
+.auth-image {
+    position: relative;
+    height: 650px;
+    border-radius: 30px;
+    overflow: hidden;
+    background-color: #F4E8DA;
+}
+
+.auth-image > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Cartão sobre a imagem */
+
+.auth-image-card {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    right: 25px;
+    padding: 30px;
+    border-radius: 25px;
+    background: rgba(255, 250, 245, 0.95);
+}
+
+.auth-image-card h2 {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.auth-image-card p {
+    color: #665C55;
+    line-height: 1.6;
+}
+
+/* Formulário */
+
+.auth-form-area {
+    width: 100%;
+}
+
+.auth-tabs {
+    display: flex;
+    background: #F4EBE1;
+    padding: 5px;
+    border-radius: 40px;
+    margin-bottom: 35px;
+}
+
+.auth-tab {
+    width: 50%;
+    padding: 14px;
+    text-align: center;
+    text-decoration: none;
+    color: #665C55;
+    border-radius: 40px;
+    transition: 0.3s;
+}
+
+.auth-tab.active {
+    background: #FDFBF7;
+    color: #171412;
+    font-weight: bold;
+}
+
+/* Título */
+
+.auth-form-area h1 {
+    font-size: 38px;
+    margin-bottom: 5px;
+    color: #171412;
+}
+
+.auth-subtitle {
+    color: #766B63;
+    margin-bottom: 30px;
+}
+
+/* Campos */
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.auth-form label {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 14px;
+    color: #171412;
+}
+
+.auth-form input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #E6D7C8;
+    border-radius: 14px;
+    background: transparent;
+    font-size: 14px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.auth-form input:focus {
+    border-color: #D98B85;
+}
+
+/* Botão */
+
+.auth-submit {
+    width: 100%;
+    padding: 17px;
+    border: none;
+    border-radius: 40px;
+    background: #171412;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.auth-submit:hover {
+    background: #B65F56;
+}
+
+/* Responsivo */
+
+@media (max-width: 800px) {
+    .auth-page {
+        grid-template-columns: 1fr;
+    }
+
+    .auth-image {
+        height: 350px;
+    }
+
+    .auth-form-area h1 {
+        font-size: 30px;
+    }
+}
+
+
+/* Campos em duas colunas */
+.auth-fields-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+/* Select */
+.auth-form select {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #E6D7C8;
+    border-radius: 14px;
+    background: transparent;
+    font-size: 14px;
+    box-sizing: border-box;
+    color: #665C55;
+}
+
+/* Área de texto do endereço */
+.auth-form textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #E6D7C8;
+    border-radius: 14px;
+    background: transparent;
+    font-size: 14px;
+    font-family: inherit;
+    resize: vertical;
+    box-sizing: border-box;
+}
+
+/* Foco dos campos */
+.auth-form select:focus,
+.auth-form textarea:focus {
+    outline: none;
+    border-color: #D98B85;
+}
+
+/* Ajuste para celular */
+@media (max-width: 500px) {
+    .auth-fields-row {
+        grid-template-columns: 1fr;
+    }
+}

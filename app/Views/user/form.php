@@ -1,56 +1,130 @@
-<div class="cadastro-page">
 
-    <div class="cadastro-imagem">
-        <img src="<?= asset('img/alimentos.png') ?>" alt="Alimentos frescos">
+<div class="auth-page">
+
+    <div class="auth-image">
+        <img src="<?= asset('img/grupos.jpg') ?>" alt="Alimentos">
+
+       
     </div>
 
-    <div class="cadastro-container">
+    <div class="auth-form-area">
 
-        <div class="cadastro-tabs">
-            <a href="<?= url('login') ?>" class="tab">Entrar</a>
-            <a href="<?= url('user/create') ?>" class="tab active">Criar conta</a>
+        <div class="auth-tabs">
+            <a href="<?= url('login') ?>" class="auth-tab">Entrar</a>
+            <a href="<?= url('user/create') ?>" class="auth-tab active">Criar conta</a>
         </div>
 
-        <div class="cadastro-titulo">
-            <h1>CRIE SUA CONTA</h1>
-            <p>Leva menos de dois minutos.</p>
-        </div>
+        <h1>CRIE SUA CONTA</h1>
+        <p class="auth-subtitle">Leva menos de dois minutos.</p>
 
-        <form method="post" action="<?= url('user/store') ?>" data-validate>
+        <form method="post" action="<?= url('user/store') ?>" class="auth-form" data-validate>
 
             <input type="hidden" name="csrf" value="<?= e($csrf) ?>">
 
-            <div class="campo-cadastro">
-                <label for="name">Nome completo</label>
+            <!-- Nome -->
+            <label>
+                Nome completo
                 <input
                     type="text"
-                    id="name"
                     name="name"
                     value="<?= e($old['name'] ?? '') ?>"
                     placeholder="Digite seu nome completo"
+                    required
                 >
-            </div>
+            </label>
 
             <?php if (isset($errors['name'])): ?>
                 <p class="erro"><?= e($errors['name']) ?></p>
             <?php endif; ?>
 
-            <div class="campo-cadastro">
-                <label for="email">E-mail</label>
+            <!-- E-mail -->
+            <label>
+                E-mail
                 <input
                     type="email"
-                    id="email"
                     name="email"
                     value="<?= e($old['email'] ?? '') ?>"
                     placeholder="Digite seu e-mail"
+                    required
                 >
-            </div>
+            </label>
 
             <?php if (isset($errors['email'])): ?>
                 <p class="erro"><?= e($errors['email']) ?></p>
             <?php endif; ?>
 
-            <button type="submit" class="btn-cadastro">
+            <!-- Senha -->
+            <label>
+                Senha
+                <input
+                    type="password"
+                    name="password"
+                    placeholder="Crie uma senha"
+                    required
+                >
+            </label>
+
+            <!-- Nascimento e Sexo -->
+            <div class="auth-fields-row">
+
+                <label>
+                    Nascimento
+                    <input
+                        type="date"
+                        name="birth_date"
+                        value="<?= e($old['birth_date'] ?? '') ?>"
+                    >
+                </label>
+
+                <label>
+                    Sexo
+                    <select name="sex">
+                        <option value="">Selecione</option>
+                        <option value="Feminino">Feminino</option>
+                        <option value="Masculino">Masculino</option>
+                        <option value="Outro">Outro</option>
+                        <option value="Prefiro não informar">Prefiro não informar</option>
+                    </select>
+                </label>
+
+            </div>
+
+            <!-- Peso e Altura -->
+            <div class="auth-fields-row">
+
+                <label>
+                    Peso (kg)
+                    <input
+                        type="number"
+                        name="weight"
+                        step="0.1"
+                        placeholder="Ex.: 65,5"
+                    >
+                </label>
+
+                <label>
+                    Altura (cm)
+                    <input
+                        type="number"
+                        name="height"
+                        step="1"
+                        placeholder="Ex.: 168"
+                    >
+                </label>
+
+            </div>
+
+            <!-- Endereço -->
+            <label>
+                Endereço
+                <textarea
+                    name="address"
+                    rows="3"
+                    placeholder="Digite seu endereço"
+                ></textarea>
+            </label>
+
+            <button type="submit" class="auth-submit">
                 Criar conta
             </button>
 
