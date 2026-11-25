@@ -10,7 +10,7 @@
     </div>
     <div class="hero-image-card">
         <div class="image-wrapper">
-            <img src="<?= asset('img/hero-bowl.png') ?>" alt="Refeição saudável">
+            <img src="<?= asset('img/imagem_principal.png') ?>" alt="Refeição saudável">
         </div>
         <div class="floating-badge">
             <span class="imc-value">22,9</span>
