@@ -23,7 +23,7 @@ body {
 .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
 .logo { display: flex; align-items: center; gap: 10px; font-size: 1.2rem; font-weight: bold; }
 .logo img {
-    height: 75px;
+    height: 100px;
     width: auto;
     object-fit: contain;
 }
@@ -58,7 +58,7 @@ body {
 
 /* Logo */
 .footer .logo img {
-    height: 75px;
+    height: 100px;
     width: auto;
     object-fit: contain;
     margin-bottom: 15px;
