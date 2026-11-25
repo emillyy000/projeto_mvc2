@@ -1484,3 +1484,83 @@ body {
         font-size: 30px;
     }
 }
+/* ===== ESQUECI MINHA SENHA ===== */
+
+.forgot-page {
+    min-height: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    background-color: #FDF8F1;
+}
+
+.forgot-container {
+    width: 100%;
+    max-width: 500px;
+    padding: 45px;
+    background-color: #FDFBF7;
+    border-radius: 25px;
+    box-sizing: border-box;
+}
+
+.forgot-container h1 {
+    font-size: 32px;
+    font-weight: 800;
+    color: #171412;
+    margin-bottom: 15px;
+}
+
+.forgot-container > p {
+    color: #777;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.forgot-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.forgot-container label {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.forgot-container input {
+    padding: 15px;
+    border: 1px solid #E6D7C5;
+    border-radius: 13px;
+    background-color: #FDF8F1;
+    margin-bottom: 25px;
+    outline: none;
+}
+
+.forgot-container input:focus {
+    border-color: #C98275;
+    box-shadow: 0 0 0 3px rgba(201, 130, 117, 0.12);
+}
+
+.forgot-container button {
+    padding: 16px;
+    background-color: #171412;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.forgot-container button:hover {
+    background-color: #B65F56;
+    transform: translateY(-2px);
+}
+
+.back-login {
+    display: block;
+    text-align: center;
+    margin-top: 25px;
+    color: #B65F56;
+    text-decoration: none;
+}

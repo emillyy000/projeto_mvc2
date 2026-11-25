@@ -37,7 +37,7 @@
                 </div>
 
                 <div class="forgot-password">
-                    <a href="#">Esqueci minha senha</a>
+                    <a href="<?= url('auth/forgot') ?>">Esqueci minha senha</a>
                 </div>
 
                 <button type="submit" class="login-button">
