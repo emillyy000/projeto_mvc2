@@ -1,7 +1,11 @@
 <section class="hero-section">
     <div class="hero-content">
         <span class="badge-sub">SEU SITE DE NUTRIÇÃO</span>
-        <h1>MAIS EQUILÍBRIO, MAIS SAÚDE, MAIS VOCÊ.</h1>
+        <h1>
+    MAIS EQUILÍBRIO,<br>
+    MAIS SAÚDE,<br>
+    <span class="texto-rosa">MAIS VOCÊ.</span>
+</h1>
         <p>O NutriUp acompanha sua alimentação, calcula seus indicadores e mostra sua evolução — para você criar hábitos saudáveis sem complicação.</p>
         <div class="hero-buttons">
     <a href="<?= url('user/create') ?>" class="hero-btn-primary">
