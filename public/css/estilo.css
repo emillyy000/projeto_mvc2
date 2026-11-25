@@ -176,3 +176,234 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+/* Página de Login */
+.login-page {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 20px;
+    align-items: center;
+}
+
+.login-image {
+    height: 650px;
+    overflow: hidden;
+    border-radius: 30px;
+}
+
+.login-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 480px;
+}
+
+.login-tabs {
+    display: flex;
+    background: #F3EBDD;
+    padding: 5px;
+    border-radius: 40px;
+    margin-bottom: 35px;
+}
+
+.login-tabs .tab {
+    flex: 1;
+    text-align: center;
+    text-decoration: none;
+    padding: 14px;
+    border-radius: 40px;
+    color: #333;
+}
+
+.login-tabs .tab.active {
+    background: #FDFBF7;
+    font-weight: bold;
+}
+
+.login-content h1 {
+    font-size: 36px;
+    margin-bottom: 8px;
+}
+
+.login-content > p {
+    color: #777;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #DED5C8;
+    border-radius: 15px;
+    background: transparent;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.forgot-password {
+    text-align: right;
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+
+.forgot-password a {
+    color: #B65F56;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.login-button {
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-radius: 40px;
+    background: #15110F;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-button:hover {
+    background: #3A302B;
+}
+
+.register-text {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.register-text a {
+    color: #B65F56;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .login-page {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin: 20px;
+    }
+
+    .login-image {
+        height: 300px;
+    }
+
+    .login-content h1 {
+        font-size: 28px;
+    }
+}
+
+/* Página de dúvidas */
+.duvidas-page {
+    background: #FDF6EC;
+    min-height: 80vh;
+    padding: 35px 20px 50px;
+}
+
+.duvidas-page h1 {
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 30px;
+    font-weight: 800;
+}
+
+.duvidas-container {
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 15px 25px;
+    background: #FFFCF8;
+    border: 1px solid #E8DED0;
+    border-radius: 30px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
+}
+
+.duvida {
+    border-bottom: 1px solid #E5DDD2;
+    padding: 20px 0;
+}
+
+.duvida:last-child {
+    border-bottom: none;
+}
+
+.duvida summary {
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.duvida summary::-webkit-details-marker {
+    display: none;
+}
+
+.duvida summary::after {
+    content: "⌄";
+    font-size: 18px;
+    font-weight: normal;
+    transition: transform 0.2s;
+}
+
+.duvida[open] summary::after {
+    transform: rotate(180deg);
+}
+
+.duvida p {
+    color: #666;
+    line-height: 1.7;
+    margin-top: 15px;
+    padding-right: 20px;
+}
+
+.duvidas-footer {
+    text-align: center;
+    margin-top: 35px;
+    color: #777;
+}
+
+.duvidas-footer a {
+    color: #B65F56;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.duvidas-footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .duvidas-page h1 {
+        font-size: 30px;
+    }
+
+    .duvidas-container {
+        padding: 10px 18px;
+        border-radius: 20px;
+    }
+
+    .duvida summary {
+        font-size: 16px;
+    }
+}

@@ -29,7 +29,7 @@
             </nav>
 
             <div class="nav-auth">
-                <a href="<?= url('login') ?>" class="btn-link">Entrar</a>
+                <a href="<?= url('auth/login') ?>">Entrar</a>
                 <a href="<?= url('user/create') ?>" class="btn-dark">Criar conta</a>
             </div>
 
