@@ -1,6 +1,6 @@
 <section class="login-page">
     <div class="login-image">
-        <img src="<?= asset('img/login_alimentos.jpg') ?>" alt="Alimentos saudáveis">
+        <img src="<?= asset('img/imagemprato.png') ?>" alt="Alimentos saudáveis">
     </div>
 
     <div class="login-container">

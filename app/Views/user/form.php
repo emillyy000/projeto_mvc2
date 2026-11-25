@@ -10,7 +10,7 @@
     <div class="auth-form-area">
 
         <div class="auth-tabs">
-            <a href="<?= url('login') ?>" class="auth-tab">Entrar</a>
+            <a href="<?= url('auth/login') ?>" class="auth-tab">Entrar</a>
             <a href="<?= url('user/create') ?>" class="auth-tab active">Criar conta</a>
         </div>
 

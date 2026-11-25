@@ -1313,3 +1313,174 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+/* ===== PÁGINA DE LOGIN ===== */
+
+.login-page {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 35px 5%;
+    min-height: 650px;
+    align-items: center;
+    background-color: #FDF8F1;
+}
+
+.login-image {
+    width: 100%;
+    height: 650px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 25px;
+}
+
+.login-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.login-tabs {
+    display: flex;
+    background-color: #F3EBDD;
+    padding: 5px;
+    border-radius: 50px;
+    margin-bottom: 35px;
+    width: 100%;
+}
+
+.login-tabs .tab {
+    width: 50%;
+    text-align: center;
+    padding: 14px;
+    border-radius: 50px;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.login-tabs .tab.active {
+    background-color: #FDFBF7;
+    color: #171412;
+    font-weight: bold;
+}
+
+.login-content h1 {
+    font-size: 38px;
+    font-weight: 800;
+    margin-bottom: 8px;
+    color: #171412;
+}
+
+.login-content > p {
+    color: #777;
+    margin-bottom: 30px;
+}
+
+.login-content form {
+    width: 100%;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #171412;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #E6D7C5;
+    border-radius: 13px;
+    background-color: #FDF8F1;
+    outline: none;
+    font-size: 14px;
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+
+.form-group input:focus {
+    border-color: #C98275;
+    box-shadow: 0 0 0 3px rgba(201, 130, 117, 0.12);
+}
+
+.forgot-password {
+    text-align: right;
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+
+.forgot-password a {
+    color: #B65F56;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.login-button {
+    width: 100%;
+    padding: 16px;
+    background-color: #171412;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-button:hover {
+    background-color: #B65F56;
+    transform: translateY(-2px);
+}
+
+.register-text {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 14px;
+    color: #777;
+}
+
+.register-text a {
+    color: #B65F56;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Responsividade para celulares */
+
+@media (max-width: 768px) {
+    .login-page {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 25px 5%;
+    }
+
+    .login-image {
+        height: 300px;
+    }
+
+    .login-container {
+        max-width: 100%;
+    }
+
+    .login-content h1 {
+        font-size: 30px;
+    }
+}

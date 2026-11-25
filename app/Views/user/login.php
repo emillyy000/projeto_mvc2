@@ -1,7 +1,7 @@
 <div class="cadastro-page">
 
     <div class="cadastro-imagem">
-        <img src="<?= asset('img/grupo.png') ?>" alt="Alimentos frescos">
+        <img src="<?= asset('img/imagemprato.png') ?>" alt="UP Nutri com alimentos frescos">
     </div>
 
     <div class="cadastro-container">
