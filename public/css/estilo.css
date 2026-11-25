@@ -1564,3 +1564,99 @@ body {
     color: #B65F56;
     text-decoration: none;
 }
+/* =========================
+   PÁGINA DE FERRAMENTAS
+========================= */
+
+.tools-page {
+    background-color: #FDF8F1;
+    min-height: 600px;
+    padding: 35px 5%;
+}
+
+.tools-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.tool-card {
+    background-color: #FDFBF7;
+    border: 1px solid #EADFD3;
+    border-radius: 30px;
+
+    padding: 30px;
+    min-height: 220px;
+
+    display: flex;
+    flex-direction: column;
+
+    box-shadow: 0 8px 20px rgba(120, 70, 40, 0.05);
+    transition: 0.3s;
+}
+
+.tool-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(120, 70, 40, 0.10);
+}
+
+.tool-icon {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.tool-card h2 {
+    font-size: 23px;
+    margin-bottom: 12px;
+    color: #171412;
+}
+
+.tool-card p {
+    font-size: 15px;
+    color: #655D56;
+    line-height: 1.6;
+    margin-bottom: 22px;
+}
+
+.tool-link {
+    color: #B65F56;
+    font-weight: 600;
+    text-decoration: none;
+    margin-top: auto;
+    transition: 0.3s;
+}
+
+.tool-link:hover {
+    color: #171412;
+    transform: translateX(4px);
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .tools-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Celular */
+@media (max-width: 600px) {
+    .tools-page {
+        padding: 25px 5%;
+    }
+
+    .tools-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tool-card {
+        padding: 25px;
+        min-height: 200px;
+    }
+
+    .tool-card h2 {
+        font-size: 21px;
+    }
+}
