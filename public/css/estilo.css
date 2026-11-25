@@ -429,130 +429,285 @@ body {
     }
 }
 
-/* Página de dúvidas */
+/* ===== PÁGINA DE DÚVIDAS ===== */
 .duvidas-page {
-    background: #FDF6EC;
+    --rosa-bebe: #ffe8e8;
+    --rosa-medio: #e99192;
+    --coral: #df8279;
+    --chocolate: #292020;
+    --creme: #fffaf4;
+    --borda: #f7d8d5;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
     min-height: 80vh;
-    padding: 35px 20px 50px;
+    padding: 85px 5% 100px;
+    background:
+        radial-gradient(circle at 8% 17%, rgba(255, 210, 211, .38) 0 140px, transparent 142px),
+        radial-gradient(circle at 91% 38%, rgba(253, 224, 196, .37) 0 170px, transparent 172px),
+        linear-gradient(180deg, #fffaf6 0%, #fff8f5 48%, #fffdf9 100%);
 }
 
+/* Detalhinhos decorativos, discretos e sem alterar o HTML */
+.duvidas-page::before,
+.duvidas-page::after {
+    position: absolute;
+    z-index: -1;
+    pointer-events: none;
+    color: #edb8b5;
+    opacity: .7;
+    line-height: 1;
+}
+.duvidas-page::before {
+    content: "✿";
+    top: 185px;
+    left: max(16px, calc(50% - 590px));
+    font-size: 70px;
+    transform: rotate(-18deg);
+}
+.duvidas-page::after {
+    content: "✧";
+    top: 225px;
+    right: max(14px, calc(50% - 580px));
+    font-size: 72px;
+    transform: rotate(14deg);
+}
+
+/* Título central + etiqueta delicada */
 .duvidas-page h1 {
+    max-width: 950px;
+    margin: 0 auto 38px;
     text-align: center;
-    font-size: 42px;
-    margin-bottom: 30px;
+    color: var(--chocolate);
+    font-size: clamp(2.25rem, 4.7vw, 3.8rem);
+    font-weight: 900;
+    line-height: 1.12;
+    letter-spacing: -.045em;
+    text-wrap: balance;
+}
+.duvidas-page h1::before {
+    content: "✿  OI, PRECISA DE UMA AJUDINHA?  ✿";
+    display: table;
+    margin: 0 auto 19px;
+    padding: 12px 22px;
+    border: 1px solid #f6c9c9;
+    border-radius: 999px;
+    background: #ffe6e7;
+    color: #af6668;
+    box-shadow: 0 4px 0 rgba(242, 186, 184, .18);
+    font-size: .71rem;
     font-weight: 800;
+    letter-spacing: .14em;
+    line-height: 1.2;
+}
+.duvidas-page h1::after {
+    content: "Respostas simples, com carinho e sem complicação ♡";
+    display: block;
+    max-width: 650px;
+    margin: 19px auto 0;
+    color: #847773;
+    font-size: clamp(.95rem, 1.6vw, 1.1rem);
+    line-height: 1.6;
+    font-weight: 500;
+    letter-spacing: 0;
 }
 
-.duvidas-container {
-    max-width: 750px;
+/* Painel das perguntas em blush pastel */
+.duvidas-page .duvidas-container {
+    position: relative;
+    display: grid;
+    gap: 15px;
+    width: 100%;
+    max-width: 930px;
     margin: 0 auto;
-    padding: 15px 25px;
-    background: #FFFCF8;
-    border: 1px solid #E8DED0;
-    border-radius: 30px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
+    padding: 25px;
+    border: 1px solid #f5d5d3;
+    border-radius: 36px;
+    background: #fff0ee;
+    box-shadow: 0 16px 48px rgba(157, 97, 97, .075);
 }
 
-.duvida {
-    border-bottom: 1px solid #E5DDD2;
-    padding: 20px 0;
+/* Cartões com pequenos toques de cor */
+.duvidas-page .duvida {
+    position: relative;
+    padding: 0 23px;
+    border: 1px solid #f3e1dd;
+    border-bottom: 1px solid #f3e1dd;
+    border-radius: 22px;
+    background: #fffdfb;
+    box-shadow: 0 5px 12px rgba(124, 71, 67, .035);
+    transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease, background .22s ease;
+}
+.duvidas-page .duvida:last-child { border-bottom: 1px solid #f3e1dd; }
+.duvidas-page .duvida:nth-child(3n + 2) { background: #fffcf6; }
+.duvidas-page .duvida:nth-child(3n + 3) { background: #fff9f9; }
+.duvidas-page .duvida:hover {
+    transform: translateY(-2px);
+    border-color: #efbbb9;
+    box-shadow: 0 9px 22px rgba(158, 101, 95, .10);
+}
+.duvidas-page .duvida[open] {
+    background: #fffdfb;
+    border-color: #e6a3a0;
+    box-shadow: 0 11px 30px rgba(158, 101, 95, .10);
 }
 
-.duvida:last-child {
-    border-bottom: none;
-}
-
-.duvida summary {
-    cursor: pointer;
-    font-size: 18px;
-    font-weight: bold;
-    list-style: none;
+/* Florzinha à esquerda + botão circular à direita */
+.duvidas-page .duvida summary {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    gap: 14px;
+    min-height: 82px;
+    padding: 19px 0;
+    color: var(--chocolate);
+    font-size: 1.065rem;
+    line-height: 1.45;
+    font-weight: 750;
+    cursor: pointer;
+    list-style: none;
 }
-
-.duvida summary::-webkit-details-marker {
-    display: none;
+.duvidas-page .duvida summary::-webkit-details-marker { display: none; }
+.duvidas-page .duvida summary::marker { content: ""; }
+.duvidas-page .duvida summary::before {
+    content: "✿";
+    flex: 0 0 37px;
+    display: grid;
+    place-items: center;
+    width: 37px;
+    height: 37px;
+    border-radius: 14px;
+    background: #ffe5e4;
+    color: #d88188;
+    font-size: 1.2rem;
+    line-height: 1;
 }
-
-.duvida summary::after {
-    content: "⌄";
-    font-size: 18px;
-    font-weight: normal;
-    transition: transform 0.2s;
+.duvidas-page .duvida:nth-child(3n + 2) summary::before {
+    content: "♡";
+    color: #c78c72;
+    background: #fff0dc;
+    font-size: 1.55rem;
 }
-
-.duvida[open] summary::after {
+.duvidas-page .duvida:nth-child(3n + 3) summary::before {
+    content: "✧";
+    background: #f9e8f1;
+    color: #c88aab;
+    font-size: 1.6rem;
+}
+.duvidas-page .duvida summary::after {
+    content: "+";
+    flex: 0 0 37px;
+    display: grid;
+    place-items: center;
+    width: 37px;
+    height: 37px;
+    margin-left: auto;
+    border-radius: 50%;
+    background: #ffe3e2;
+    color: #b9616a;
+    font-size: 1.45rem;
+    font-weight: 500;
+    line-height: 1;
+    transition: transform .2s ease, color .2s ease, background .2s ease;
+}
+.duvidas-page .duvida[open] summary::after {
+    content: "−";
+    background: #e99192;
+    color: #fff;
     transform: rotate(180deg);
 }
-
-.duvida p {
-    color: #666;
-    line-height: 1.7;
-    margin-top: 15px;
-    padding-right: 20px;
+.duvidas-page .duvida summary:hover { color: #bd6c70; }
+.duvidas-page .duvida summary:focus-visible {
+    outline: 3px solid #e99192;
+    outline-offset: 4px;
+    border-radius: 12px;
+}
+.duvidas-page .duvida p {
+    margin: 0 0 0 51px;
+    padding: 0 50px 24px 0;
+    color: #756e6c;
+    font-size: .975rem;
+    line-height: 1.8;
 }
 
-.duvidas-footer {
-    text-align: center;
-    margin-top: 35px;
-    color: #777;
+/* Convite final: leve, docinho e legível */
+.duvidas-page .duvidas-footer {
+    max-width: 930px;
+    margin: 30px auto 0;
+    padding: 28px 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 14px;
+    border: 1px solid #f3cec9;
+    border-radius: 28px;
+    background: #ffe6e2;
+    color: #6b4242;
+    font-size: clamp(1.1rem, 2.1vw, 1.4rem);
+    font-weight: 800;
+    line-height: 1.4;
+    box-shadow: 0 8px 25px rgba(158, 101, 95, .055);
 }
-
-.duvidas-footer a {
-    color: #B65F56;
-    font-weight: bold;
+.duvidas-page .duvidas-footer::before {
+    content: "♡";
+    display: grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #fff7f4;
+    color: #d98286;
+    font-size: 1.9rem;
+    font-weight: 400;
+}
+.duvidas-page .duvidas-footer a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 24px;
+    border-radius: 999px;
+    background: #df857d;
+    color: #241b1b;
+    font-size: .91rem;
+    font-weight: 800;
     text-decoration: none;
+    transition: transform .2s ease, background .2s ease;
 }
-
-.duvidas-footer a:hover {
-    text-decoration: underline;
+.duvidas-page .duvidas-footer a:hover {
+    background: #e69b93;
+    transform: translateY(-2px);
+}
+.duvidas-page .duvidas-footer a:focus-visible {
+    outline: 3px solid #aa6562;
+    outline-offset: 4px;
 }
 
 @media (max-width: 768px) {
-    .duvidas-page h1 {
-        font-size: 30px;
-    }
-
-    .duvidas-container {
-        padding: 10px 18px;
-        border-radius: 20px;
-    }
-
-    .duvida summary {
-        font-size: 16px;
-    }
+    .duvidas-page { padding: 55px 5% 70px; }
+    .duvidas-page::before { left: -15px; top: 155px; font-size: 45px; opacity: .35; }
+    .duvidas-page::after { right: -12px; top: 185px; font-size: 44px; opacity: .35; }
+    .duvidas-page h1 { margin-bottom: 28px; font-size: clamp(2rem, 8vw, 3rem); }
+    .duvidas-page h1::before { font-size: .62rem; padding: 10px 16px; letter-spacing: .08em; }
+    .duvidas-page h1::after { font-size: .94rem; }
+    .duvidas-page .duvidas-container { padding: 14px; gap: 11px; border-radius: 24px; }
+    .duvidas-page .duvida { padding: 0 14px; border-radius: 18px; }
+    .duvidas-page .duvida summary { min-height: 72px; gap: 10px; font-size: .96rem; }
+    .duvidas-page .duvida summary::before { flex-basis: 30px; width: 30px; height: 30px; border-radius: 11px; }
+    .duvidas-page .duvida summary::after { flex-basis: 31px; width: 31px; height: 31px; font-size: 1.25rem; }
+    .duvidas-page .duvida p { margin-left: 40px; padding: 0 5px 19px 0; font-size: .91rem; }
+    .duvidas-page .duvidas-footer { padding: 23px; border-radius: 23px; }
 }
-
-/* ===== SEÇÃO O QUE VOCÊ ENCONTRA ===== */
-
-.features-section {
-    background-color: #FBEAE6;
-    padding: 80px 7%;
-    width: 100%;
-    max-width: none;
-    margin: 0;
-    box-sizing: border-box;
+@media (max-width: 520px) {
+    .duvidas-page .duvidas-footer { display: grid; grid-template-columns: 42px 1fr; gap: 10px 12px; }
+    .duvidas-page .duvidas-footer a { grid-column: 1 / -1; width: 100%; }
 }
-
-.section-subtitle {
-    display: block;
-    color: #B65F56;
-    font-size: 13px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    margin-bottom: 15px;
+@media (prefers-reduced-motion: reduce) {
+    .duvidas-page .duvida,
+    .duvidas-page .duvida summary::after,
+    .duvidas-page .duvidas-footer a { transition: none; }
+    .duvidas-page .duvida:hover,
+    .duvidas-page .duvidas-footer a:hover { transform: none; }
 }
-
-.features-section h2 {
-    font-size: 42px;
-    line-height: 1.1;
-    max-width: 650px;
-    margin-bottom: 40px;
-    color: #171412;
-}
-
 /* Cards */
 .features-grid {
     display: grid;
