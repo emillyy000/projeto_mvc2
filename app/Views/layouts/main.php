@@ -21,10 +21,12 @@
                
             </div>
 
-            <nav class="nav-links">
-                <a href="<?= url('conteudos') ?>">Conteúdos</a>
-                <a href="<?= url('duvidas') ?>">Dúvidas</a>
-            </nav>
+          <nav class="nav-links">
+    <a href="<?= url('') ?>">Início</a>
+    <a href="<?= url('conteudos') ?>">Conteúdos</a>
+    <a href="<?= url('ferramentas') ?>">Ferramentas</a>
+    <a href="<?= url('duvidas') ?>">Dúvidas</a>
+</nav>
 
             <div class="nav-auth">
                 <a href="<?= url('auth/login') ?>">Entrar</a>
