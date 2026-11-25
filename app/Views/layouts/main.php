@@ -24,8 +24,6 @@
             <nav class="nav-links">
                 <a href="<?= url('conteudos') ?>">Conteúdos</a>
                 <a href="<?= url('duvidas') ?>">Dúvidas</a>
-                <a href="<?= url('user/index') ?>">Usuários</a>
-                <a href="<?= url('user/create') ?>">Novo usuário</a>
             </nav>
 
             <div class="nav-auth">
