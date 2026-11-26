@@ -3504,3 +3504,63 @@ body.tools-layout .tools-grid .tool-icon img {
 .quiz-score.is-good { background: #4D9658; }
 .quiz-score.is-medium { background: #E79A2D; }
 .quiz-score.is-low { background: #C94743; }
+
+/* Campo de peso e botao para calcular a estimativa de agua. */
+.water-weight-form {
+    display: flex;
+    align-items: flex-end;
+    gap: 12px;
+}
+.water-weight-field { flex: 1 1 auto; min-width: 0; }
+.water-weight-field label {
+    display: block;
+    margin-bottom: 9px;
+    color: #171412;
+    font-size: 14px;
+    font-weight: 600;
+}
+.water-weight-field input#water-weight {
+    width: 100%;
+    height: 46px;
+    padding: 0 15px;
+    border: 1px solid #E8DCCF;
+    border-radius: 24px;
+    background: #FFFCF8;
+    color: #171412;
+    font: inherit;
+    accent-color: auto;
+}
+.water-weight-field input#water-weight:focus {
+    border-color: #C94743;
+    outline: 3px solid rgba(201, 71, 67, .12);
+}
+.water-calculate {
+    flex: 0 0 auto;
+    min-height: 44px;
+    padding: 0 19px;
+    border: 0;
+    border-radius: 24px;
+    background: #C94743;
+    color: #fff;
+    font: inherit;
+    font-size: 14px;
+    font-weight: 650;
+    cursor: pointer;
+}
+.water-calculate:hover { background: #AE3734; }
+.water-calculate:focus-visible { outline: 3px solid rgba(201, 71, 67, .3); outline-offset: 3px; }
+.water-error { margin: 10px 0 0; color: #B42318; font-size: 13px; }
+.water-cup {
+    display: inline-block;
+    padding: 0;
+    appearance: none;
+}
+.water-cup.is-filled::after { content: ""; }
+.water-cup:not(.is-filled)::after { content: ""; }
+@media (max-width: 520px) {
+    .water-weight-form { align-items: stretch; flex-direction: column; }
+    .water-calculate { width: 100%; }
+}
+.water-weight-field { flex: 0 1 440px; }
+.water-cup-form { margin: 0; }
+.water-cup { display: block; line-height: 0; }

@@ -3,26 +3,44 @@
         <div class="water-heading">
             <span class="water-eyebrow">HIDRATE-SE</span>
             <h1>QUANTA &Aacute;GUA BEBER?</h1>
-            <p>Refer&ecirc;ncia comum: 35 ml por kg de peso corporal.</p>
+            <p>Refer&ecirc;ncia geral: 35 ml por kg de peso corporal.</p>
         </div>
 
         <section class="water-tracker" aria-label="Calculadora e acompanhamento de hidrata&ccedil;&atilde;o">
-            <div class="water-weight-row">
-                <label for="water-weight">Seu peso: <output id="water-weight-value" for="water-weight">45</output> kg</label>
-                <input id="water-weight" type="range" min="20" max="150" step="1" value="45">
-            </div>
+            <form method="post" action="<?= url('ferramentas/agua') ?>" class="water-weight-form">
+                <div class="water-weight-field">
+                    <label for="water-weight">Seu peso (kg)</label>
+                    <input id="water-weight" name="weight" type="number" min="1" max="300" step="0.1" inputmode="decimal" placeholder="Ex.: 70" value="<?= $weight !== null ? e((string) $weight) : '' ?>" required>
+                </div>
+                <button class="water-calculate" type="submit" name="action" value="calculate">Calcular &aacute;gua</button>
+            </form>
+
+            <?php if ($error !== ''): ?>
+                <p class="water-error" role="alert"><?= e($error) ?></p>
+            <?php endif; ?>
 
             <div class="water-goal" aria-live="polite" aria-atomic="true">
-                <strong id="water-liters">1,6 L</strong>
-                <span>POR DIA &asymp; <b id="water-cup-goal">7</b> COPOS</span>
+                <strong id="water-liters"><?= $liters !== null ? number_format($liters, 1, ',', '.') . ' L' : '&mdash; L' ?></strong>
+                <span>POR DIA &asymp; <b><?= $cupGoal > 0 ? (int) $cupGoal : '&mdash;' ?></b> COPOS</span>
             </div>
 
-            <div class="water-drink-progress">
-                <p id="water-cup-count">Copos de hoje: 0/7</p>
-                <div class="water-cups" id="water-cups" aria-label="Marque os copos de água que você bebeu"></div>
-            </div>
+            <?php if ($cupGoal > 0): ?>
+                <div class="water-drink-progress">
+                    <p>Copos de hoje: <?= (int) $cupsConsumed ?>/<?= (int) $cupGoal ?></p>
+                    <div class="water-cups" aria-label="Copos de &aacute;gua">
+                        <?php for ($cup = 0; $cup < $cupGoal; $cup++): ?>
+                            <?php $isFilled = in_array($cup, $tracker['cups'], true); ?>
+                            <form method="post" action="<?= url('ferramentas/agua') ?>" class="water-cup-form">
+                                <input type="hidden" name="action" value="toggle">
+                                <input type="hidden" name="cup_index" value="<?= $cup ?>">
+                                <button type="submit" class="water-cup<?= $isFilled ? ' is-filled' : '' ?>" aria-pressed="<?= $isFilled ? 'true' : 'false' ?>" aria-label="Copo <?= $cup + 1 ?>: <?= $isFilled ? 'bebido' : 'marcar como bebido' ?>"></button>
+                            </form>
+                        <?php endfor; ?>
+                    </div>
+                </div>
+            <?php endif; ?>
 
-            <p class="water-note">Estimativa geral baseada em 35 ml/kg. A necessidade pode variar com idade, clima, atividade e saúde. Em caso de dúvida, converse com um profissional de saúde.</p>
+            <p class="water-note">Estimativa geral, n&atilde;o uma orienta&ccedil;&atilde;o individual. A necessidade varia com idade, clima, atividade e sa&uacute;de. Se voc&ecirc; for menor de idade, converse com um respons&aacute;vel ou profissional de sa&uacute;de.</p>
         </section>
     </div>
 </section>

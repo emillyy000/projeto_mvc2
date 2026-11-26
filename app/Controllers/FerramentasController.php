@@ -49,7 +49,63 @@ class FerramentasController
 
     public function agua(): void
     {
-        $title = 'Quanta água beber?';
+        $title = 'Quanta agua beber?';
+        if (session_status() !== PHP_SESSION_ACTIVE) {
+            session_start();
+        }
+
+        $today = date('Y-m-d');
+        if (!isset($_SESSION['water_tracker']) || ($_SESSION['water_tracker']['date'] ?? '') !== $today) {
+            $_SESSION['water_tracker'] = ['date' => $today, 'weight' => null, 'cups' => []];
+        }
+
+        $tracker = $_SESSION['water_tracker'];
+        $error = '';
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $actionInput = $_POST['action'] ?? '';
+            $action = is_string($actionInput) ? $actionInput : '';
+
+            if ($action === 'calculate') {
+                $weightInput = $_POST['weight'] ?? '';
+                $weightText = is_string($weightInput) ? str_replace(',', '.', trim($weightInput)) : '';
+                $weight = filter_var($weightText, FILTER_VALIDATE_FLOAT);
+
+                if ($weight === false || $weight < 1 || $weight > 300) {
+                    $error = 'Informe um peso valido entre 1 e 300 kg.';
+                } else {
+                    $cupGoal = (int) ceil(($weight * 35) / 250);
+                    $tracker['weight'] = (float) $weight;
+                    $tracker['cups'] = array_values(array_filter(
+                        $tracker['cups'],
+                        static fn (int $cup): bool => $cup >= 0 && $cup < $cupGoal
+                    ));
+                    $_SESSION['water_tracker'] = $tracker;
+                    header('Location: ' . url('ferramentas/agua'));
+                    exit;
+                }
+            } elseif ($action === 'toggle' && $tracker['weight'] !== null) {
+                $cupInput = $_POST['cup_index'] ?? '';
+                $cup = is_string($cupInput) ? filter_var($cupInput, FILTER_VALIDATE_INT) : false;
+                $cupGoal = (int) ceil(($tracker['weight'] * 35) / 250);
+
+                if ($cup !== false && $cup >= 0 && $cup < $cupGoal) {
+                    if (in_array($cup, $tracker['cups'], true)) {
+                        $tracker['cups'] = array_values(array_diff($tracker['cups'], [$cup]));
+                    } else {
+                        $tracker['cups'][] = $cup;
+                        sort($tracker['cups']);
+                    }
+                    $_SESSION['water_tracker'] = $tracker;
+                    header('Location: ' . url('ferramentas/agua'));
+                    exit;
+                }
+            }
+        }
+
+        $weight = $tracker['weight'];
+        $cupGoal = $weight === null ? 0 : (int) ceil(($weight * 35) / 250);
+        $liters = $weight === null ? null : ($weight * 35) / 1000;
+        $cupsConsumed = count($tracker['cups']);
 
         ob_start();
         require __DIR__ . '/../Views/ferramentas/agua.php';
@@ -57,7 +113,6 @@ class FerramentasController
 
         require __DIR__ . '/../Views/layouts/main.php';
     }
-
     public function prato(): void
     {
         $title = 'Monte seu prato';
