@@ -2743,3 +2743,760 @@ body.tools-layout .header .nav-auth {
         height: auto;
     }
 }
+
+/* Calculadora de IMC */
+.imc-page {
+    min-height: 70vh;
+    padding: 48px 24px 80px;
+    background: #FBF7F0;
+}
+.imc-container {
+    width: min(1112px, 100%);
+    margin: 0 auto;
+}
+.imc-heading { margin-bottom: 42px; }
+.imc-eyebrow {
+    display: block;
+    margin-bottom: 10px;
+    color: #C94743;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+.imc-heading h1 {
+    margin: 0;
+    color: #171412;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    font-size: clamp(42px, 5vw, 64px);
+    font-weight: 400;
+    line-height: 1.05;
+}
+.imc-heading > p {
+    margin: 16px 0 0;
+    color: #625B55;
+    font-size: 15px;
+}
+.imc-layout {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    align-items: stretch;
+}
+.imc-form,
+.imc-result {
+    min-height: 214px;
+    padding: 28px;
+    border-radius: 32px;
+}
+.imc-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border: 1px solid #E8DCCF;
+    background: #FFFCF8;
+    box-shadow: 0 8px 20px rgba(60, 40, 20, .04);
+}
+.imc-field label {
+    display: block;
+    margin-bottom: 7px;
+    color: #171412;
+    font-size: 14px;
+    font-weight: 600;
+}
+.imc-field input {
+    width: 100%;
+    min-height: 46px;
+    padding: 10px 15px;
+    border: 1px solid #E8DCCF;
+    border-radius: 20px;
+    outline: none;
+    background: #FFFCF8;
+    color: #171412;
+    font: inherit;
+}
+.imc-field input:focus {
+    border-color: #C94743;
+    box-shadow: 0 0 0 3px rgba(201, 71, 67, .12);
+}
+.imc-submit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 46px;
+    margin-top: 3px;
+    padding: 0 17px;
+    border: 0;
+    border-radius: 24px;
+    background: #171412;
+    color: #fff;
+    font: inherit;
+    font-weight: 650;
+    cursor: pointer;
+}
+.imc-submit:hover { background: #C94743; }
+.imc-submit span { font-size: 20px; }
+.imc-error {
+    margin: 0;
+    color: #B42318;
+    font-size: 14px;
+}
+.imc-result {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #17110F;
+    color: #FFFCF8;
+}
+.imc-result-label {
+    color: #E54A43;
+    font-size: 12px;
+    font-weight: 750;
+    letter-spacing: 2px;
+}
+.imc-result-value {
+    display: block;
+    margin: 22px 0;
+    font-size: clamp(42px, 5vw, 58px);
+    line-height: 1;
+}
+.imc-result-value.imc-empty { letter-spacing: 5px; }
+.imc-result p {
+    margin: 0;
+    color: #FFFCF8;
+    font-size: 16px;
+    line-height: 1.55;
+}
+@media (max-width: 720px) {
+    .imc-page { padding: 36px 20px 56px; }
+    .imc-layout { grid-template-columns: 1fr; }
+    .imc-heading { margin-bottom: 28px; }
+    .imc-form, .imc-result { min-height: 210px; padding: 24px; border-radius: 26px; }
+}
+
+/* O cabecalho interno da calculadora nao deve herdar a barra global do site. */
+.imc-page .imc-heading {
+    width: auto;
+    height: auto;
+    min-height: 0;
+    margin: 0 0 42px;
+    padding: 0;
+    border: 0;
+    background: transparent !important;
+}
+
+/* Acompanhamento de hidratacao */
+.water-page {
+    min-height: 70vh;
+    padding: 48px 24px 72px;
+    background: #FBF7F0;
+}
+.water-container {
+    width: min(1112px, 100%);
+    margin: 0 auto;
+}
+.water-heading { margin-bottom: 40px; }
+.water-eyebrow {
+    display: block;
+    margin-bottom: 10px;
+    color: #C94743;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+.water-heading h1 {
+    margin: 0;
+    color: #171412;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    font-size: clamp(42px, 5vw, 64px);
+    font-weight: 400;
+    line-height: 1.05;
+}
+.water-heading > p {
+    margin: 16px 0 0;
+    color: #625B55;
+    font-size: 15px;
+}
+.water-tracker {
+    padding: 28px;
+    border: 1px solid #E8DCCF;
+    border-radius: 32px;
+    background: #FFFCF8;
+    box-shadow: 0 8px 20px rgba(60, 40, 20, .04);
+}
+.water-weight-row label {
+    display: block;
+    margin-bottom: 12px;
+    color: #171412;
+    font-size: 14px;
+    font-weight: 600;
+}
+#water-weight {
+    display: block;
+    width: 100%;
+    height: 8px;
+    margin: 0;
+    border-radius: 10px;
+    accent-color: #E8867E;
+    cursor: pointer;
+}
+.water-goal {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin: 32px 0 26px;
+    color: #171412;
+}
+.water-goal strong {
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    font-size: clamp(44px, 5vw, 58px);
+    font-weight: 400;
+    line-height: 1;
+}
+.water-goal > span {
+    color: #625B55;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    font-size: 18px;
+}
+.water-drink-progress > p {
+    margin: 0 0 13px;
+    color: #171412;
+    font-size: 14px;
+    font-weight: 600;
+}
+.water-cups {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+}
+.water-cup {
+    position: relative;
+    width: 40px;
+    height: 48px;
+    overflow: hidden;
+    padding: 0;
+    border: 2px solid #E8DCCF;
+    border-radius: 0 0 19px 19px;
+    background: transparent;
+    cursor: pointer;
+    transition: border-color .18s ease, transform .18s ease;
+}
+.water-cup::after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 0;
+    background: #E9877F;
+    content: "";
+    transition: height .2s ease;
+}
+.water-cup:hover { border-color: #E9877F; transform: translateY(-2px); }
+.water-cup.is-filled { border-color: #E9877F; }
+.water-cup.is-filled::after { height: 72%; }
+.water-cup:focus-visible { outline: 3px solid rgba(201, 71, 67, .35); outline-offset: 3px; }
+.water-note {
+    max-width: 720px;
+    margin: 24px 0 0;
+    color: #756D66;
+    font-size: 12px;
+    line-height: 1.6;
+}
+@media (max-width: 600px) {
+    .water-page { padding: 36px 20px 52px; }
+    .water-heading { margin-bottom: 28px; }
+    .water-tracker { padding: 22px; border-radius: 26px; }
+    .water-goal { flex-wrap: wrap; gap: 8px; }
+}
+
+/* Ferramenta Monte seu Prato */
+.plate-page {
+    min-height: 70vh;
+    padding: 48px 24px 72px;
+    background: #FBF7F0;
+}
+.plate-container {
+    width: min(1112px, 100%);
+    margin: 0 auto;
+}
+.plate-heading { margin-bottom: 42px; }
+.plate-eyebrow {
+    display: block;
+    margin-bottom: 10px;
+    color: #C94743;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+.plate-heading h1 {
+    margin: 0;
+    color: #171412;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    font-size: clamp(42px, 5vw, 64px);
+    font-weight: 400;
+    line-height: 1.05;
+}
+.plate-heading > p {
+    margin: 16px 0 0;
+    color: #625B55;
+    font-size: 15px;
+}
+.plate-groups {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+.plate-group {
+    min-height: 198px;
+    padding: 24px;
+    border: 1px solid #E8DCCF;
+    border-radius: 32px;
+    background: #FFFCF8;
+    box-shadow: 0 8px 20px rgba(60, 40, 20, .04);
+}
+.plate-group h2 {
+    margin: 0;
+    color: #171412;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 1.1;
+}
+.plate-portion {
+    margin: 6px 0 16px;
+    color: #625B55;
+    font-size: 12px;
+}
+.plate-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.plate-option {
+    min-height: 36px;
+    padding: 7px 16px;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    background: #FCEBCB;
+    color: #171412;
+    font: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color .18s ease, border-color .18s ease, transform .18s ease;
+}
+.plate-option:hover { transform: translateY(-1px); }
+.plate-option[aria-pressed="true"] {
+    border-color: #C94743;
+    background: #F8DAD5;
+}
+.plate-option:focus-visible {
+    outline: 3px solid rgba(201, 71, 67, .3);
+    outline-offset: 2px;
+}
+.plate-guide {
+    margin: 24px 0 0;
+    padding: 22px 24px;
+    border-radius: 30px;
+    background: #FCEBCB;
+    color: #171412;
+    font-size: 15px;
+    line-height: 1.5;
+}
+.plate-guide.is-complete { background: #EAF0E5; }
+@media (max-width: 900px) {
+    .plate-groups { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 600px) {
+    .plate-page { padding: 36px 20px 52px; }
+    .plate-heading { margin-bottom: 28px; }
+    .plate-groups { grid-template-columns: 1fr; }
+    .plate-group { min-height: 0; padding: 22px; border-radius: 26px; }
+}
+
+/* As opcoes do prato sao etiquetas somente para visualizacao. */
+.plate-option {
+    cursor: default;
+    transition: none;
+}
+.plate-option:hover { transform: none; }
+
+/* Checklist diario de habitos */
+.habit-page {
+    min-height: 70vh;
+    padding: 38px 24px 72px;
+    background: #FBF7F0;
+}
+.habit-container {
+    width: min(504px, 100%);
+    margin: 0 auto;
+}
+.habit-heading { margin-bottom: 30px; }
+.habit-eyebrow {
+    display: block;
+    margin-bottom: 8px;
+    color: #C94743;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+.habit-heading h1 {
+    margin: 0;
+    color: #171412;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    font-size: clamp(34px, 4.5vw, 48px);
+    font-weight: 400;
+    line-height: 1.08;
+}
+.habit-heading p {
+    margin: 10px 0 0;
+    color: #625B55;
+    font-size: 13px;
+}
+.habit-card {
+    padding: 20px 21px;
+    border: 1px solid #E8DCCF;
+    border-radius: 25px;
+    background: #FFFCF8;
+    box-shadow: 0 8px 20px rgba(60, 40, 20, .04);
+}
+.habit-progress {
+    height: 9px;
+    overflow: hidden;
+    border-radius: 999px;
+    background: #F2EAE1;
+}
+.habit-progress > span {
+    display: block;
+    width: 0;
+    height: 100%;
+    border-radius: inherit;
+    background: #E9877F;
+    transition: width .2s ease;
+}
+.habit-progress-label {
+    margin: 7px 0 13px;
+    color: #171412;
+    font-size: 10px;
+    font-weight: 650;
+}
+.habit-list {
+    display: grid;
+    gap: 6px;
+}
+.habit-item {
+    position: relative;
+    display: flex;
+    min-height: 37px;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: #F4EEE7;
+    color: #171412;
+    cursor: pointer;
+    transition: background-color .16s ease;
+}
+.habit-item input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    clip-path: inset(50%);
+}
+.habit-check {
+    display: grid;
+    flex: 0 0 16px;
+    width: 16px;
+    height: 16px;
+    place-items: center;
+    border: 1px solid #655D56;
+    border-radius: 50%;
+    background: transparent;
+}
+.habit-check::after {
+    width: 7px;
+    height: 4px;
+    border-bottom: 1.5px solid #fff;
+    border-left: 1.5px solid #fff;
+    content: "";
+    opacity: 0;
+    transform: translateY(-1px) rotate(-45deg);
+}
+.habit-text { font-size: 11px; }
+.habit-item:has(input:checked) { background: #FCEBCB; }
+.habit-item input:checked + .habit-check {
+    border-color: #4D9658;
+    background: #4D9658;
+}
+.habit-item input:checked + .habit-check::after { opacity: 1; }
+.habit-item input:checked ~ .habit-text {
+    color: #746B62;
+    text-decoration: line-through;
+}
+.habit-item input:focus-visible + .habit-check {
+    outline: 3px solid rgba(201, 71, 67, .25);
+    outline-offset: 2px;
+}
+@media (max-width: 600px) {
+    .habit-page { padding: 30px 18px 52px; }
+    .habit-card { padding: 18px 15px; }
+}
+
+/* Quiz nutricional */
+.nutrition-quiz-page {
+    min-height: 70vh;
+    padding: 48px 24px 80px;
+    background: #FBF7F0;
+}
+.nutrition-quiz-container {
+    width: min(980px, 100%);
+    margin: 0 auto;
+}
+.quiz-card {
+    min-height: 440px;
+    padding: 40px;
+    border: 1px solid #E8DCCF;
+    border-radius: 34px;
+    background: #FFFCF8;
+    box-shadow: 0 2px 3px rgba(60, 40, 20, .12);
+}
+.quiz-meta {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    color: #625B55;
+    font-size: 14px;
+}
+.quiz-meta strong { color: #C94743; }
+.quiz-progress {
+    height: 8px;
+    overflow: hidden;
+    margin-top: 14px;
+    border-radius: 999px;
+    background: #F2EEE8;
+}
+.quiz-progress > span {
+    display: block;
+    height: 100%;
+    border-radius: inherit;
+    background: #C94743;
+    transition: width .2s ease;
+}
+.quiz-question {
+    margin: 34px 0 24px;
+    color: #171412;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: clamp(22px, 3vw, 27px);
+    font-weight: 800;
+    line-height: 1.25;
+}
+.quiz-answers {
+    display: grid;
+    gap: 11px;
+}
+.quiz-answer {
+    width: 100%;
+    min-height: 58px;
+    padding: 15px 20px;
+    border: 1px solid #E8DCCF;
+    border-radius: 999px;
+    background: #FBF7F2;
+    color: #171412;
+    font: inherit;
+    font-size: 15px;
+    text-align: left;
+    cursor: pointer;
+    transition: background-color .16s ease, border-color .16s ease, transform .16s ease;
+}
+.quiz-answer:hover:not(:disabled) {
+    transform: translateY(-1px);
+    border-color: #D7BFB0;
+    background: #FCEBCB;
+}
+.quiz-answer.is-selected {
+    border-color: #C94743;
+    background: #F8E1DC;
+}
+.quiz-answer:focus-visible,
+.quiz-restart:focus-visible {
+    outline: 3px solid rgba(201, 71, 67, .3);
+    outline-offset: 3px;
+}
+.quiz-score {
+    display: inline-block;
+    padding: 6px 15px;
+    border-radius: 999px;
+    background: #E79A2D;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+}
+.quiz-result-title {
+    margin: 25px 0 8px;
+    color: #171412;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: clamp(26px, 4vw, 34px);
+    font-weight: 850;
+    line-height: 1.2;
+}
+.quiz-result-message {
+    margin: 0 0 24px;
+    color: #756D66;
+    font-size: 15px;
+    line-height: 1.6;
+}
+.quiz-suggestions {
+    padding: 21px 20px;
+    border-radius: 27px;
+    background: #F3EFE8;
+    color: #655D56;
+    font-size: 15px;
+    line-height: 1.6;
+}
+.quiz-suggestions > strong { color: #171412; }
+.quiz-suggestions ul {
+    display: grid;
+    gap: 5px;
+    margin: 8px 0 0;
+    padding-left: 20px;
+}
+.quiz-suggestions p { margin: 8px 0 0; }
+.quiz-disclaimer {
+    margin: 16px 0 0;
+    color: #756D66;
+    font-size: 12px;
+    line-height: 1.5;
+}
+.quiz-result-footer {
+    margin-top: 30px;
+    padding-top: 22px;
+    border-top: 1px solid #E8DCCF;
+}
+.quiz-restart {
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: #C94743;
+    font: inherit;
+    font-weight: 650;
+    cursor: pointer;
+}
+@media (max-width: 600px) {
+    .nutrition-quiz-page { padding: 30px 16px 56px; }
+    .quiz-card { min-height: 0; padding: 25px 20px; border-radius: 27px; }
+    .quiz-question { margin-top: 28px; }
+    .quiz-answer { min-height: 54px; padding: 13px 17px; }
+    .quiz-suggestions { padding: 18px; border-radius: 22px; }
+}
+
+/* Icones PNG da pasta img usados nos cards das ferramentas. */
+body.tools-layout .tools-grid .tool-icon img {
+    display: block;
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+/* Quiz em formulario unico, com perguntas empilhadas. */
+.quiz-intro { margin-bottom: 28px; }
+.quiz-eyebrow {
+    display: block;
+    margin-bottom: 8px;
+    color: #C94743;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+.quiz-intro h1 {
+    margin: 0;
+    color: #171412;
+    font-size: clamp(26px, 4vw, 34px);
+    font-weight: 850;
+    line-height: 1.2;
+}
+.quiz-intro p { margin: 9px 0 0; color: #756D66; font-size: 14px; }
+.quiz-form { margin: 0; }
+.quiz-question-block {
+    min-width: 0;
+    margin: 0;
+    padding: 26px 0 0;
+    border: 0;
+    border-top: 1px solid #E8DCCF;
+}
+.quiz-question-block + .quiz-question-block { margin-top: 27px; }
+.quiz-question-title {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    width: 100%;
+    margin: 0 0 17px;
+    padding: 0;
+    color: #171412;
+    font-size: clamp(18px, 2.5vw, 21px);
+    font-weight: 800;
+    line-height: 1.35;
+}
+.quiz-question-number {
+    flex: 0 0 auto;
+    color: #C94743;
+    font-size: 20px;
+    font-weight: 850;
+}
+.quiz-question-block .quiz-answers { display: grid; gap: 10px; }
+.quiz-question-block .quiz-answer {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-height: 58px;
+    padding: 13px 18px;
+    border: 1px solid #E8DCCF;
+    border-radius: 999px;
+    background: #FBF7F2;
+    color: #171412;
+    font: inherit;
+    font-size: 15px;
+    text-align: left;
+    cursor: pointer;
+    transform: none;
+}
+.quiz-question-block .quiz-answer:hover { background: #FBF7F2; border-color: #E8DCCF; transform: none; }
+.quiz-question-block .quiz-answer input {
+    flex: 0 0 auto;
+    width: 16px;
+    height: 16px;
+    margin: 0;
+    accent-color: #C94743;
+}
+.quiz-question-block .quiz-answer:has(input:checked) { background: #FCEBCB; }
+.quiz-question-block .quiz-answer input:focus-visible { outline: 3px solid rgba(201, 71, 67, .3); outline-offset: 3px; }
+.quiz-submit {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 52px;
+    margin-top: 28px;
+    padding: 0 20px;
+    border: 0;
+    border-radius: 999px;
+    background: #171412;
+    color: #fff;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+.quiz-submit:hover { background: #C94743; }
+.quiz-error { margin: 0 0 20px; color: #B42318; font-size: 14px; }
+.quiz-result {
+    margin-top: 32px;
+    padding-top: 28px;
+    border-top: 1px solid #E8DCCF;
+}
+.quiz-result-footer a { text-decoration: none; }
+@media (max-width: 600px) {
+    .quiz-question-block { padding-top: 22px; }
+    .quiz-question-block + .quiz-question-block { margin-top: 22px; }
+    .quiz-question-block .quiz-answer { min-height: 53px; padding: 12px 15px; }
+}

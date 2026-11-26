@@ -8,7 +8,7 @@
     <title><?= e($title ?? 'UpNutri - Seu site de nutrição') ?></title>
 
     <link rel="icon" href="<?= asset('img/logo.png') ?>">
-    <link rel="stylesheet" href="<?= asset('css/estilo.css') ?>?v=20261126">
+    <link rel="stylesheet" href="<?= asset('css/estilo.css') ?>">
 </head>
 
 <?php $currentPage = explode('/', trim($_GET['url'] ?? '', '/'))[0] ?? ''; ?>
