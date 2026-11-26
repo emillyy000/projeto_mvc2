@@ -759,6 +759,86 @@ body {
     }
 }
 
+/* Cabeçalho conforme a referência, preservando a logo original do site. */
+.header {
+    height: auto;
+    min-height: 61px;
+    padding: 0 12px;
+    background: #FBF7F0;
+    border-bottom: 1px solid #E8E0D6;
+}
+
+.header .nav-container {
+    width: 100%;
+    max-width: none;
+    min-height: 60px;
+    height: auto;
+    margin: 0;
+    justify-content: flex-start;
+}
+
+.header .nav-container > .logo img {
+    display: block;
+    width: 64px;
+    height: auto;
+}
+
+.header .nav-links {
+    gap: 8px;
+    margin-left: 24px;
+}
+
+.header .nav-links a {
+    padding: 8px 12px;
+    border-radius: 999px;
+    color: #655D56;
+    font-size: 14px;
+    transition: background-color .2s ease, color .2s ease;
+}
+
+.header .nav-links a:hover,
+.header .nav-links a.active {
+    background: #FCEBCB;
+    color: #655D56;
+}
+
+.header .nav-auth {
+    gap: 12px;
+}
+
+.header .nav-auth a:first-child {
+    padding: 8px 0;
+    color: #171412;
+}
+
+.header .nav-auth .btn-dark {
+    padding: 10px 18px;
+    background: #171412;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+@media (max-width: 700px) {
+    .header .nav-container {
+        flex-wrap: wrap;
+        gap: 6px 12px;
+        padding: 8px 0;
+    }
+
+    .header .nav-links {
+        order: 3;
+        width: 100%;
+        margin: 0;
+        gap: 2px;
+        overflow-x: auto;
+    }
+
+    .header .nav-links a {
+        padding: 7px 10px;
+    }
+}
+
 .features-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -2069,5 +2149,597 @@ body {
 
     .features-section .features-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+/* ===== CABEÇALHO ===== */
+header {
+    background-color: #FBF5EB !important;
+    border-bottom: 1px solid #E8DCCB;
+    height: 56px;
+    min-height: 56px;
+}
+
+/* Conteúdo do cabeçalho */
+header .container,
+header .navbar,
+header .nav-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Links do menu */
+header nav a {
+    color: #5B5148;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* Botão criar conta */
+header .btn,
+header button {
+    border-radius: 50px;
+}
+
+/* Fundo do cabeçalho */
+header {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+/* Cabeçalho */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Logo e menu ficam agrupados à esquerda */
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+/* Menu */
+.header-left nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+/* Entrar e Criar conta continuam à direita */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* ===== CABEÇALHO ALINHADO À ESQUERDA ===== */
+
+.header {
+    background-color: #FBF5EB;
+    border-bottom: 1px solid #E8DCCB;
+    width: 100%;
+}
+
+.nav-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 56px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* Logo à esquerda */
+.nav-container .logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.nav-container .logo img {
+    width: 75px;
+    height: auto;
+    display: block;
+}
+
+/* Links agrupados ao lado da logo */
+.nav-container .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    margin-left: 30px;
+}
+
+/* Links do menu */
+.nav-container .nav-links a {
+    text-decoration: none;
+    color: #5B5148;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+/* Entrar e Criar conta à direita */
+.nav-container .nav-auth {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-left: auto;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+    .nav-container {
+        flex-wrap: wrap;
+        padding: 12px 0;
+        gap: 15px;
+    }
+
+    .nav-container .nav-links {
+        margin-left: 10px;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+}
+
+/* Ajustes finais do cabe�alho de acordo com a refer�ncia. */
+.header {
+    height: auto;
+    min-height: 61px;
+    padding: 0 12px;
+    background-color: #FBF7F0 !important;
+}
+.header .nav-container {
+    width: 100%;
+    max-width: none;
+    min-height: 60px;
+    height: auto;
+    margin: 0;
+    justify-content: flex-start;
+}
+.header .nav-container > .logo img { width: 64px; height: auto; }
+.header .nav-links { gap: 8px; margin-left: 24px; }
+.header .nav-links a {
+    padding: 8px 12px;
+    border-radius: 999px;
+    color: #655D56;
+    font-size: 14px;
+}
+.header .nav-links a:hover,
+.header .nav-links a.active { background: #FCEBCB; color: #655D56; }
+.header .nav-auth { gap: 12px; }
+.header .nav-auth a:first-child { padding: 8px 0; color: #171412; }
+.header .nav-auth .btn-dark {
+    padding: 10px 18px;
+    background: #171412;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+}
+@media (max-width: 700px) {
+    .header .nav-container { flex-wrap: wrap; gap: 6px 12px; padding: 8px 0; }
+    .header .nav-links {
+        order: 3;
+        width: 100%;
+        margin: 0;
+        gap: 2px;
+        overflow-x: auto;
+    }
+    .header .nav-links a { padding: 7px 10px; }
+}
+
+/* ===== NOVO VISUAL DA PÁGINA FERRAMENTAS ===== */
+
+.tools-page {
+    background-color: #FBF5EB;
+    padding: 45px 0 50px;
+}
+
+.tools-page .tools-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tools-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 30px;
+    padding-bottom: 35px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #E8DCCF;
+}
+
+.tools-header .eyebrow {
+    color: #C65B55;
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.tools-header h1 {
+    font-size: 48px;
+    line-height: 1.1;
+    font-weight: 500;
+    color: #171412;
+    margin: 0;
+}
+
+.tools-header h1 span {
+    color: #C65B55;
+}
+
+.tools-header p {
+    max-width: 320px;
+    color: #625B55;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* GRID DOS CARDS */
+
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+}
+
+/* 3 cards na primeira linha */
+.tools-grid .tool-card:nth-child(-n+3) {
+    grid-column: span 2;
+}
+
+/* 2 cards maiores na segunda linha */
+.tools-grid .tool-card:nth-child(4),
+.tools-grid .tool-card:nth-child(5) {
+    grid-column: span 3;
+}
+
+/* CARD */
+
+.tools-grid .tool-card {
+    background-color: #FFFCF8;
+    border: 1px solid #E8DCCF;
+    border-radius: 30px;
+    padding: 28px;
+    min-height: 335px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-sizing: border-box;
+    box-shadow: 0 8px 20px rgba(60, 40, 20, 0.04);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tools-grid .tool-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(60, 40, 20, 0.09);
+}
+
+/* NÚMERO DO CARD */
+
+.tool-number {
+    position: absolute;
+    top: 28px;
+    right: 28px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #E9DED4;
+}
+
+/* ÍCONES */
+
+.tool-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+.tool-card:nth-child(1) .tool-icon,
+.tool-card:nth-child(4) .tool-icon {
+    background-color: #FDE9E5;
+    color: #C94743;
+}
+
+.tool-card:nth-child(2) .tool-icon,
+.tool-card:nth-child(5) .tool-icon {
+    background-color: #E6EEEE;
+    color: #1681A1;
+}
+
+.tool-card:nth-child(3) .tool-icon {
+    background-color: #EAF0E5;
+    color: #4E9852;
+}
+
+/* TEXTOS */
+
+.tool-category {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #625B55;
+    margin-bottom: 10px;
+}
+
+.tools-grid .tool-card h2 {
+    font-size: 24px;
+    font-weight: 500;
+    color: #171412;
+    margin: 0 0 15px;
+}
+
+.tools-grid .tool-card p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #625B55;
+    margin: 0;
+}
+
+/* BOTÃO/LINK DO CARD */
+
+.tool-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #E8DCCF;
+    padding-top: 18px;
+    margin-top: auto;
+    text-decoration: none;
+    color: #C94743;
+    font-size: 14px;
+}
+
+.tool-link .arrow {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: #FCEBD0;
+    color: #171412;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 900px) {
+    .tools-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tools-grid .tool-card:nth-child(n) {
+        grid-column: span 1;
+    }
+
+    .tools-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .tools-header h1 {
+        font-size: 38px;
+    }
+}
+
+@media (max-width: 600px) {
+    .tools-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tools-grid .tool-card:nth-child(n) {
+        grid-column: span 1;
+    }
+
+    .tools-grid .tool-card {
+        min-height: 300px;
+        padding: 24px;
+    }
+
+    .tools-header h1 {
+        font-size: 32px;
+    }
+}
+/* Pagina de ferramentas: cabecalho e cartoes no estilo da referencia. */
+body.tools-layout .header {
+    border-top: 8px solid #302E2C;
+    padding: 0;
+}
+body.tools-layout .header .nav-container {
+    width: min(83%, 1112px);
+    max-width: 1112px;
+    min-height: 60px;
+    margin: 0 auto;
+}
+body.tools-layout .tools-page {
+    padding: 18px 0 48px;
+    background: #FBF7F0;
+}
+body.tools-layout .tools-container {
+    width: min(83%, 1112px);
+    max-width: 1112px;
+}
+body.tools-layout .tools-header {
+    align-items: center;
+    padding-bottom: 28px;
+    margin-bottom: 40px;
+}
+body.tools-layout .tools-header .eyebrow {
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+body.tools-layout .tools-header h1 {
+    font-family: Impact, "Arial Narrow", sans-serif;
+    font-size: clamp(38px, 4.4vw, 56px);
+    font-weight: 400;
+    letter-spacing: -1px;
+}
+body.tools-layout .tools-header h1 span {
+    color: #C94743;
+}
+body.tools-layout .tools-header .tools-intro {
+    max-width: 320px;
+    font-size: 14px;
+    line-height: 1.65;
+}
+body.tools-layout .tools-grid {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 20px;
+}
+body.tools-layout .tools-grid .tool-card:nth-child(-n+3) { grid-column: span 2; }
+body.tools-layout .tools-grid .tool-card:nth-child(n+4) { grid-column: span 3; }
+body.tools-layout .tools-grid .tool-card {
+    min-height: 335px;
+    padding: 28px;
+    border-radius: 32px;
+    background: #FFFCF8;
+    border-color: #E8DCCF;
+    box-shadow: 0 8px 20px rgba(60, 40, 20, .04);
+}
+body.tools-layout .tool-icon {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 25px;
+    border-radius: 24px;
+}
+body.tools-layout .tool-icon svg { width: 32px; height: 32px; }
+body.tools-layout .tools-grid .tool-card:nth-child(1) .tool-icon,
+body.tools-layout .tools-grid .tool-card:nth-child(4) .tool-icon { background: #FDE9E5; color: #C94743; }
+body.tools-layout .tools-grid .tool-card:nth-child(2) .tool-icon,
+body.tools-layout .tools-grid .tool-card:nth-child(5) .tool-icon { background: #E6EEEE; color: #1681A1; }
+body.tools-layout .tools-grid .tool-card:nth-child(3) .tool-icon { background: #EAF0E5; color: #4E9852; }
+body.tools-layout .tools-grid .tool-card h2 {
+    margin: 0 0 12px;
+    font-family: Impact, "Arial Narrow", sans-serif;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 1.15;
+}
+body.tools-layout .tools-grid .tool-card p:not(.tool-category) {
+    font-size: 14px;
+    line-height: 1.65;
+}
+body.tools-layout .tool-category { margin-bottom: 8px; }
+body.tools-layout .tool-link { margin-top: auto; }
+@media (max-width: 900px) {
+    body.tools-layout .header .nav-container,
+    body.tools-layout .tools-container { width: 90%; }
+    body.tools-layout .tools-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    body.tools-layout .tools-grid .tool-card:nth-child(n) { grid-column: span 1; }
+}
+@media (max-width: 700px) {
+    body.tools-layout .header .nav-container { width: 100%; }
+}
+@media (max-width: 600px) {
+    body.tools-layout .tools-grid { grid-template-columns: 1fr; }
+    body.tools-layout .tools-grid .tool-card:nth-child(n) { grid-column: 1; }
+    body.tools-layout .tools-header { gap: 16px; }
+}
+
+
+
+/* Ajustes de correspondencia com a primeira referencia. */
+body.tools-layout .header .nav-container,
+body.tools-layout .tools-container {
+    width: min(1112px, calc(100% - 48px));
+}
+body.tools-layout .tools-page {
+    padding-top: 24px;
+}
+body.tools-layout .tools-header {
+    padding-bottom: 30px;
+    margin-bottom: 40px;
+}
+body.tools-layout .tools-header h1,
+body.tools-layout .tools-header h1 span {
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    font-weight: 400;
+}
+body.tools-layout .tools-header h1 span {
+    color: #C94743;
+}
+
+/* Espaco vertical entre o cabecalho e o conteudo de ferramentas. */
+.tools-page {
+    padding-top: 52px !important;
+}
+
+/* Usa a mesma tipografia forte da pagina inicial em ferramentas. */
+body.tools-layout .tools-header h1,
+body.tools-layout .tools-header h1 span,
+body.tools-layout .tools-grid .tool-card h2 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+body.tools-layout .tools-header h1,
+body.tools-layout .tools-header h1 span {
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 1.05;
+    letter-spacing: -1.5px;
+}
+body.tools-layout .tools-grid .tool-card h2 {
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+/* Afasta o conteudo de ferramentas da navegacao, como na pagina inicial. */
+.tools-page {
+    padding-top: 96px !important;
+}
+
+/* O cabecalho de Ferramentas acompanha o mesmo alinhamento da pagina inicial. */
+body.tools-layout .header {
+    min-height: 56px;
+    height: 56px;
+    padding: 0 12px;
+    border-top: 0;
+    background-color: #FBF5EB !important;
+}
+body.tools-layout .header .nav-container {
+    width: 100%;
+    max-width: none;
+    min-height: 56px;
+    height: 56px;
+    margin: 0;
+    padding: 0;
+    justify-content: flex-start;
+}
+body.tools-layout .header .nav-container > .logo img {
+    width: 64px;
+    height: auto;
+}
+body.tools-layout .header .nav-links {
+    margin-left: 24px;
+    gap: 8px;
+}
+body.tools-layout .header .nav-links a {
+    background: transparent;
+}
+body.tools-layout .header .nav-links a.active {
+    background: transparent;
+}
+body.tools-layout .header .nav-auth {
+    margin-left: auto;
+}
+@media (max-width: 700px) {
+    body.tools-layout .header {
+        height: auto;
+    }
+    body.tools-layout .header .nav-container {
+        width: 100%;
+        height: auto;
     }
 }
