@@ -40,7 +40,12 @@
 
             <?php if ($result !== null): ?>
                 <section class="quiz-result" aria-labelledby="quiz-result-title">
-                    <span class="quiz-score"><?= (int) $result['score'] ?> de 10 pontos</span>
+                    <?php
+                        $scoreClass = $result['score'] >= 8
+                            ? 'is-good'
+                            : ($result['score'] >= 5 ? 'is-medium' : 'is-low');
+                    ?>
+                    <span class="quiz-score <?= $scoreClass ?>"><?= (int) $result['score'] ?> de 10 pontos</span>
                     <h2 class="quiz-result-title" id="quiz-result-title"><?= e($result['title']) ?></h2>
                     <p class="quiz-result-message"><?= e($result['message']) ?></p>
                     <div class="quiz-suggestions">

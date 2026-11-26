@@ -3500,3 +3500,7 @@ body.tools-layout .tools-grid .tool-icon img {
     .quiz-question-block + .quiz-question-block { margin-top: 22px; }
     .quiz-question-block .quiz-answer { min-height: 53px; padding: 12px 15px; }
 }
+
+.quiz-score.is-good { background: #4D9658; }
+.quiz-score.is-medium { background: #E79A2D; }
+.quiz-score.is-low { background: #C94743; }
