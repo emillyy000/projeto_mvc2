@@ -3564,3 +3564,495 @@ body.tools-layout .tools-grid .tool-icon img {
 .water-weight-field { flex: 0 1 440px; }
 .water-cup-form { margin: 0; }
 .water-cup { display: block; line-height: 0; }
+
+/* =========================
+   PÁGINA SOBRE
+========================= */
+
+.sobre-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 70px 5% 80px;
+}
+
+/* APRESENTAÇÃO */
+
+.sobre-hero {
+    padding-bottom: 55px;
+    border-bottom: 1px solid #E8DCCB;
+}
+
+.sobre-eyebrow {
+    display: block;
+    color: #C44D45;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
+
+.sobre-hero h1 {
+    font-size: clamp(45px, 7vw, 90px);
+    line-height: 1;
+    font-weight: 900;
+    color: #171412;
+    margin-bottom: 25px;
+}
+
+.sobre-hero h1 span {
+    color: #C44D45;
+}
+
+.sobre-intro {
+    max-width: 700px;
+    font-size: 20px;
+    line-height: 1.7;
+    color: #62564D;
+}
+
+/* PROPÓSITO */
+
+.sobre-proposito {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 70px;
+    padding: 65px 0;
+    border-bottom: 1px solid #E8DCCB;
+    align-items: start;
+}
+
+.sobre-proposito-titulo h2 {
+    font-size: 38px;
+    line-height: 1.2;
+    color: #171412;
+}
+
+.sobre-proposito-texto p {
+    color: #62564D;
+    font-size: 16px;
+    line-height: 1.9;
+    margin-bottom: 20px;
+}
+
+/* VALORES */
+
+.sobre-valores {
+    padding: 65px 0;
+    border-bottom: 1px solid #E8DCCB;
+}
+
+.sobre-valores-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.sobre-valor-card {
+    background: #FFFCF8;
+    border: 1px solid #E8DCCB;
+    border-radius: 24px;
+    padding: 30px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.sobre-valor-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(50, 30, 15, 0.06);
+}
+
+.sobre-valor-icon {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    background: #FBE9D2;
+    color: #C44D45;
+    font-size: 24px;
+    margin-bottom: 25px;
+}
+
+.sobre-valor-card h3 {
+    font-size: 23px;
+    margin-bottom: 12px;
+    color: #171412;
+}
+
+.sobre-valor-card p {
+    color: #62564D;
+    line-height: 1.7;
+}
+
+/* EQUIPE */
+
+.sobre-equipe {
+    padding: 65px 0 30px;
+}
+
+.sobre-equipe > h2 {
+    font-size: 40px;
+    margin-bottom: 35px;
+    color: #171412;
+}
+
+.sobre-equipe-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.sobre-equipe-card {
+    background: #FFFCF8;
+    border: 1px solid #E8DCCB;
+    border-radius: 24px;
+    padding: 30px;
+    min-height: 220px;
+}
+
+.sobre-equipe-letra {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #FBE9D2;
+    color: #C44D45;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.sobre-equipe-card h3 {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 12px;
+    color: #171412;
+}
+
+.sobre-equipe-card p {
+    color: #85766A;
+}
+
+/* AVISO */
+
+.sobre-aviso {
+    margin-top: 35px;
+}
+
+.sobre-aviso p {
+    color: #85766A;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 850px) {
+    .sobre-proposito {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .sobre-valores-grid,
+    .sobre-equipe-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sobre-hero h1 {
+        font-size: 48px;
+    }
+
+    .sobre-intro {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 500px) {
+    .sobre-page {
+        padding-top: 45px;
+    }
+
+    .sobre-proposito-titulo h2,
+    .sobre-equipe > h2 {
+        font-size: 30px;
+    }
+
+    .sobre-valor-card,
+    .sobre-equipe-card {
+        padding: 23px;
+    }
+}
+/* APRESENTAÇÃO COM IMAGEM */
+
+.sobre-hero {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: center;
+    gap: 35px;
+    padding-bottom: 45px;
+    border-bottom: 1px solid #E8DCCB;
+}
+
+.sobre-hero-texto {
+    min-width: 0;
+}
+
+.sobre-hero-imagem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sobre-hero-imagem img {
+    width: 100%;
+    max-width: 400px;
+    height: 280px;
+    object-fit: contain;
+}
+
+/* Ajuste para celular */
+@media (max-width: 850px) {
+    .sobre-hero {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .sobre-hero-imagem img {
+        height: 220px;
+    }
+}
+/* ===== CORREÇÃO DO LAYOUT DA PÁGINA SOBRE ===== */
+
+.sobre-hero {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 40px;
+    box-sizing: border-box;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.sobre-hero-texto h1 {
+    font-size: clamp(45px, 5vw, 75px);
+    line-height: 1.05;
+    margin: 15px 0 25px;
+}
+
+.sobre-hero-texto h1 span {
+    display: inline;
+}
+
+.sobre-hero-texto p {
+    max-width: 600px;
+    line-height: 1.8;
+}
+
+.sobre-hero-imagem img {
+    width: 100%;
+    max-width: 450px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 24px;
+}
+
+/* SEÇÃO NOSSO PROPÓSITO */
+
+.sobre-proposito {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 40px;
+    box-sizing: border-box;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 850px) {
+    .sobre-hero {
+        grid-template-columns: 1fr;
+        padding: 35px 20px;
+        gap: 25px;
+    }
+
+    .sobre-hero-texto h1 {
+        font-size: 42px;
+    }
+
+    .sobre-hero-imagem img {
+        height: 250px;
+    }
+
+    .sobre-proposito {
+        padding: 40px 20px;
+    }
+}
+/* ===== CENTRALIZAÇÃO DA SEÇÃO VALORES ===== */
+
+.sobre-valores {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 40px;
+    box-sizing: border-box;
+}
+
+.sobre-valores-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.sobre-valor-card {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+/* ===== CENTRALIZAÇÃO DA SEÇÃO EQUIPE ===== */
+
+.sobre-equipe {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 40px;
+    box-sizing: border-box;
+}
+
+.sobre-equipe h2 {
+    margin-top: 25px;
+    margin-bottom: 35px;
+}
+
+.sobre-equipe-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    width: 100%;
+}
+
+.sobre-equipe-card {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+
+@media (max-width: 900px) {
+    .sobre-valores-grid,
+    .sobre-equipe-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .sobre-valores,
+    .sobre-equipe {
+        padding: 40px 20px;
+    }
+
+    .sobre-valores-grid,
+    .sobre-equipe-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* AUMENTAR OS TEXTOS PEQUENOS EM ROSA DA PÁGINA SOBRE */
+
+.sobre-eyebrow {
+    font-size: 15px;
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+/* ===== CORREÇÃO DO RODAPÉ ===== */
+
+.footer {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.footer-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 30px;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr 0.8fr;
+    gap: 60px;
+    box-sizing: border-box;
+    align-items: start;
+}
+
+.footer-col {
+    min-width: 0;
+}
+
+.footer-col:first-child {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-col:first-child .logo {
+    margin-bottom: 20px;
+}
+
+.footer-col:first-child p {
+    max-width: 350px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.footer-col h4 {
+    margin: 0 0 18px;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.footer-bottom {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+/* Ajuste para telas menores */
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding: 35px 20px;
+    }
+}
+/* CENTRALIZAR AVISO DA PÁGINA SOBRE */
+
+.sobre-aviso {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.sobre-aviso p {
+    text-align: center;
+    margin: 0;
+    line-height: 1.7;
+}
