@@ -11,7 +11,14 @@
     <link rel="stylesheet" href="<?= asset('css/estilo.css') ?>">
 </head>
 
-<?php $currentPage = explode('/', trim($_GET['url'] ?? '', '/'))[0] ?? ''; ?>
+<?php
+$urlAtual = trim($_GET['url'] ?? '', '/');
+$currentPage = explode('/', $urlAtual)[0] ?? '';
+
+if ($urlAtual === '' || $urlAtual === 'user/index') {
+    $currentPage = 'inicio';
+}
+?>
 <body class="<?= $currentPage === 'ferramentas' ? 'tools-layout' : '' ?>">
 
     <header class="header">
@@ -22,7 +29,7 @@
         </div>
 
         <nav class="nav-links">
-            <a href="<?= url('') ?>"<?= $currentPage === 'user' ? ' class="active" aria-current="page"' : '' ?>>Início</a>
+           <a href="<?= url('') ?>"<?= $currentPage === 'inicio' ? ' class="active" aria-current="page"' : '' ?>>Início</a>
             <a href="<?= url('conteudos') ?>"<?= $currentPage === 'conteudos' ? ' class="active" aria-current="page"' : '' ?>>Conteúdos</a>
             <a href="<?= url('ferramentas') ?>"<?= $currentPage === 'ferramentas' ? ' class="active" aria-current="page"' : '' ?>>Ferramentas</a>
             <a href="<?= url('duvidas') ?>"<?= $currentPage === 'duvidas' ? ' class="active" aria-current="page"' : '' ?>>Dúvidas</a>

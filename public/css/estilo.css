@@ -2728,9 +2728,6 @@ body.tools-layout .header .nav-links {
 body.tools-layout .header .nav-links a {
     background: transparent;
 }
-body.tools-layout .header .nav-links a.active {
-    background: transparent;
-}
 body.tools-layout .header .nav-auth {
     margin-left: auto;
 }
@@ -4055,4 +4052,10 @@ body.tools-layout .tools-grid .tool-icon img {
     text-align: center;
     margin: 0;
     line-height: 1.7;
+}
+/* DESTAQUE DA ABA FERRAMENTAS */
+body.tools-layout .header .nav-links a.active {
+    background-color: #FCEBCB !important;
+    color: #655D56 !important;
+    border-radius: 50px;
 }
