@@ -4241,3 +4241,252 @@ body.tools-layout .header .nav-auth {
     gap: 12px;
     margin: 0;
 }
+/* =====================================
+   MEU PAINEL - UP NUTRI
+===================================== */
+
+.painel-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 50px auto 70px;
+}
+
+/* Introdução */
+
+.painel-intro {
+    margin-bottom: 40px;
+}
+
+.painel-eyebrow {
+    display: block;
+    color: #C94743;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+}
+
+.painel-intro h1 {
+    font-size: 58px;
+    line-height: 1.1;
+    color: #171412;
+    margin: 0 0 18px;
+}
+
+.painel-intro p {
+    max-width: 600px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #655D56;
+}
+
+/* Cards de indicadores */
+
+.painel-indicadores {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+}
+
+.painel-card {
+    background: #FFFCF9;
+    border: 1px solid #EADCCF;
+    border-radius: 32px;
+    padding: 24px 20px;
+    min-height: 130px;
+    box-shadow: 0 10px 25px rgba(180, 110, 80, 0.08);
+}
+
+.painel-card-titulo {
+    display: block;
+    color: #C94743;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+}
+
+.painel-card h2 {
+    color: #171412;
+    font-size: 42px;
+    margin: 0 0 5px;
+}
+
+.painel-card p {
+    color: #655D56;
+    font-size: 13px;
+    margin: 0;
+}
+
+/* Responsividade */
+
+@media (max-width: 1000px) {
+    .painel-indicadores {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+    .painel-container {
+        width: 92%;
+        margin-top: 30px;
+    }
+
+    .painel-intro h1 {
+        font-size: 40px;
+    }
+
+    .painel-indicadores {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .painel-card {
+        padding: 20px 16px;
+        border-radius: 24px;
+    }
+
+    .painel-card h2 {
+        font-size: 32px;
+    }
+}
+/* =====================================
+   MEU PAINEL - REGISTRO DO DIA
+===================================== */
+
+.painel-registro {
+    margin-top: 60px;
+    padding-top: 40px;
+    border-top: 1px solid #EADCCF;
+}
+
+.painel-secao-intro {
+    margin-bottom: 30px;
+}
+
+.painel-secao-intro h2 {
+    font-size: 38px;
+    color: #171412;
+    margin: 10px 0 12px;
+}
+
+.painel-secao-intro p {
+    color: #655D56;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* Grid dos registros */
+
+.painel-registro-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+/* Cards */
+
+.registro-box {
+    background: #FFFCF9;
+    border: 1px solid #EADCCF;
+    border-radius: 28px;
+    padding: 25px;
+    box-shadow: 0 10px 25px rgba(180, 110, 80, 0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.registro-box:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 30px rgba(180, 110, 80, 0.10);
+}
+
+/* Ícones */
+
+.registro-icon {
+    width: 58px;
+    height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FCEBCB;
+    border-radius: 20px;
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+/* Textos */
+
+.registro-box h3 {
+    font-size: 22px;
+    color: #171412;
+    margin: 0 0 12px;
+}
+
+.registro-box p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #655D56;
+    margin-bottom: 20px;
+}
+
+/* Status */
+
+.registro-status {
+    display: inline-block;
+    padding: 8px 12px;
+    background: #F8F0E5;
+    border-radius: 50px;
+    color: #A65B50;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* Responsividade */
+
+@media (max-width: 1000px) {
+    .painel-registro-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .painel-secao-intro h2 {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 600px) {
+    .painel-registro {
+        margin-top: 40px;
+        padding-top: 30px;
+    }
+
+    .painel-registro-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .painel-secao-intro h2 {
+        font-size: 28px;
+    }
+
+    .registro-box {
+        padding: 22px;
+    }
+}
+/* AJUSTE DE LARGURA DA SEÇÃO DE REGISTROS */
+
+.painel-registro {
+    width: 90%;
+    max-width: 1200px;
+    margin: 60px auto 70px;
+    padding-top: 40px;
+    border-top: 1px solid #EADCCF;
+    box-sizing: border-box;
+}
+
+.painel-registro-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.registro-box {
+    min-width: 0;
+    box-sizing: border-box;
+}
