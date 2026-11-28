@@ -28,13 +28,21 @@ if ($urlAtual === '' || $urlAtual === 'user/index') {
             <img src="<?= asset('img/logo_site.png') ?>" alt="UpNutri Logo">
         </div>
 
-        <nav class="nav-links">
-           <a href="<?= url('') ?>"<?= $currentPage === 'inicio' ? ' class="active" aria-current="page"' : '' ?>>Início</a>
-            <a href="<?= url('conteudos') ?>"<?= $currentPage === 'conteudos' ? ' class="active" aria-current="page"' : '' ?>>Conteúdos</a>
-            <a href="<?= url('ferramentas') ?>"<?= $currentPage === 'ferramentas' ? ' class="active" aria-current="page"' : '' ?>>Ferramentas</a>
-            <a href="<?= url('duvidas') ?>"<?= $currentPage === 'duvidas' ? ' class="active" aria-current="page"' : '' ?>>Dúvidas</a>
-            <a href="<?= url('sobre') ?>"<?= $currentPage === 'sobre' ? ' class="active" aria-current="page"' : '' ?>>Sobre</a>
-        </nav>
+       <nav class="nav-links">
+    <a href="<?= url('') ?>"<?= $currentPage === 'inicio' ? ' class="active" aria-current="page"' : '' ?>>Início</a>
+
+    <a href="<?= url('conteudos') ?>"<?= $currentPage === 'conteudos' ? ' class="active" aria-current="page"' : '' ?>>Conteúdos</a>
+
+    <a href="<?= url('ferramentas') ?>"<?= $currentPage === 'ferramentas' ? ' class="active" aria-current="page"' : '' ?>>Ferramentas</a>
+
+    <a href="<?= url('duvidas') ?>"<?= $currentPage === 'duvidas' ? ' class="active" aria-current="page"' : '' ?>>Dúvidas</a>
+
+    <a href="<?= url('sobre') ?>"<?= $currentPage === 'sobre' ? ' class="active" aria-current="page"' : '' ?>>Sobre</a>
+
+    <?php if (isset($_SESSION['user'])): ?>
+        <a href="<?= url('meuPainel') ?>"<?= $currentPage === 'meuPainel' ? ' class="active" aria-current="page"' : '' ?>>Meu painel</a>
+    <?php endif; ?>
+</nav>
 
        <div class="nav-auth">
     <?php if (isset($_SESSION['user'])): ?>

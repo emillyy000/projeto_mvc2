@@ -4490,3 +4490,925 @@ body.tools-layout .header .nav-auth {
     min-width: 0;
     box-sizing: border-box;
 }
+/* ==========================================
+   MEU PAINEL - NOVO VISUAL
+   ========================================== */
+
+.painel-container {
+    width: min(1200px, 90%);
+    margin: 0 auto;
+    padding: 55px 0 70px;
+    color: #171412;
+}
+
+/* INTRO */
+
+.painel-intro {
+    margin-bottom: 42px;
+}
+
+.painel-eyebrow {
+    display: block;
+    color: #c83d36;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+}
+
+.painel-intro h1 {
+    font-family: inherit;
+    font-size: clamp(42px, 6vw, 68px);
+    font-weight: 800;
+    line-height: 1;
+    margin: 0 0 20px;
+    color: #171412;
+}
+
+.painel-intro p {
+    max-width: 600px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #655d56;
+    margin: 0;
+}
+
+/* INDICADORES */
+
+.painel-indicadores {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.painel-card {
+    min-height: 132px;
+    padding: 24px 20px;
+    background: #fffdfa;
+    border: 1px solid #eadccf;
+    border-radius: 30px;
+    box-shadow: 0 12px 25px rgba(75, 48, 30, 0.05);
+}
+
+.painel-card-titulo {
+    display: block;
+    color: #c83d36;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    margin-bottom: 20px;
+}
+
+.painel-card h2 {
+    font-size: 38px;
+    font-weight: 700;
+    margin: 0 0 6px;
+    line-height: 1;
+    color: #171412;
+}
+
+.painel-card p {
+    color: #655d56;
+    font-size: 12px;
+    margin: 0;
+}
+
+/* DIVISÓRIA */
+
+.painel-divider {
+    height: 12px;
+    border-radius: 30px;
+    background: #f3ebe2;
+    margin: 16px 0 40px;
+}
+
+/* GRID PRINCIPAL */
+
+.painel-dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+/* CARDS GRANDES */
+
+.painel-box {
+    background: #fffdfa;
+    border: 1px solid #eadccf;
+    border-radius: 32px;
+    padding: 28px;
+    min-height: 320px;
+    box-shadow: 0 12px 25px rgba(75, 48, 30, 0.04);
+}
+
+.painel-box h2,
+.painel-sugestoes h2 {
+    font-size: 27px;
+    font-weight: 800;
+    margin: 0 0 22px;
+    color: #171412;
+    line-height: 1.15;
+}
+
+.painel-box-desc {
+    color: #655d56;
+    font-size: 14px;
+    margin: -8px 0 24px;
+    line-height: 1.6;
+}
+
+/* FORMULÁRIO */
+
+.painel-form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.painel-form-row {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 12px;
+}
+
+.painel-form input,
+.painel-form select,
+.painel-form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px 18px;
+    border: 1px solid #eadccf;
+    border-radius: 20px;
+    background: #fffdfa;
+    font-family: inherit;
+    font-size: 15px;
+    color: #171412;
+    outline: none;
+}
+
+.painel-form input:focus,
+.painel-form select:focus,
+.painel-form textarea:focus {
+    border-color: #d9a96b;
+    box-shadow: 0 0 0 3px rgba(249, 226, 188, 0.35);
+}
+
+.painel-form textarea {
+    resize: vertical;
+    min-height: 90px;
+}
+
+.painel-btn-dark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 50px;
+    background: #171412;
+    color: #fff;
+    font-weight: 700;
+    font-size: 14px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.painel-btn-dark:hover {
+    background: #38302b;
+    transform: translateY(-2px);
+}
+
+/* ESTADO VAZIO */
+
+.painel-empty {
+    color: #655d56;
+    font-size: 14px;
+}
+
+/* HÁBITOS */
+
+.painel-habitos {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.painel-habito {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 15px 0;
+    border-bottom: 1px solid #f0e5da;
+}
+
+.painel-habito:last-child {
+    border-bottom: none;
+}
+
+.habito-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 58px;
+    height: 58px;
+    min-width: 58px;
+    border-radius: 20px;
+    background: #fcebcf;
+    color: #171412;
+}
+
+.habito-icon svg {
+    width: 28px;
+    height: 28px;
+}
+
+.painel-habito strong {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+
+.painel-habito p {
+    font-size: 13px;
+    color: #655d56;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* ROTINA */
+
+.painel-rotina {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.rotina-item span {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.rotina-linha {
+    width: 100%;
+    height: 12px;
+    border-radius: 30px;
+    background: #f3ebe2;
+    overflow: hidden;
+}
+
+.rotina-progresso {
+    width: 0%;
+    height: 100%;
+    border-radius: 30px;
+    background: #d8a66d;
+}
+
+/* SUGESTÕES */
+
+.painel-sugestoes {
+    margin-top: 24px;
+    padding: 30px 26px;
+    background: #fffdfa;
+    border: 1px solid #eadccf;
+    border-radius: 32px;
+    box-shadow: 0 12px 25px rgba(75, 48, 30, 0.04);
+}
+
+.painel-sugestoes-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.painel-sugestoes-header h2 {
+    margin-bottom: 8px;
+}
+
+.painel-sugestoes-header p {
+    color: #655d56;
+    font-size: 14px;
+    margin: 0;
+}
+
+.painel-sugestoes-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.sugestao-card {
+    padding: 22px;
+    background: #fcebcf;
+    border-radius: 25px;
+}
+
+.sugestao-card h3 {
+    margin: 0 0 10px;
+    font-size: 16px;
+    color: #171412;
+}
+
+.sugestao-card p {
+    margin: 0;
+    color: #655d56;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 1000px) {
+
+    .painel-indicadores {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .painel-sugestoes-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    .painel-container {
+        width: 92%;
+        padding-top: 35px;
+    }
+
+    .painel-indicadores {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .painel-dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .painel-box {
+        padding: 22px;
+        min-height: auto;
+    }
+
+    .painel-form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .painel-sugestoes-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .painel-sugestoes-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 420px) {
+
+    .painel-indicadores {
+        grid-template-columns: 1fr;
+    }
+
+    .painel-card {
+        min-height: auto;
+    }
+
+    .painel-intro h1 {
+        font-size: 42px;
+    }
+
+    .painel-box h2,
+    .painel-sugestoes h2 {
+        font-size: 23px;
+    }
+
+}
+/* =========================
+   PAINEL - MODELO DASHBOARD
+========================= */
+
+.painel-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 55px 30px 35px;
+}
+
+.painel-intro {
+    margin-bottom: 42px;
+}
+
+.painel-eyebrow {
+    color: #c83c35;
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+
+.painel-intro h1 {
+    font-size: 64px;
+    margin: 15px 0;
+    color: #171412;
+}
+
+.painel-intro p {
+    max-width: 600px;
+    line-height: 1.7;
+    color: #655d56;
+}
+
+/* INDICADORES */
+
+.painel-indicadores {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+}
+
+.painel-card {
+    background: #fffdfb;
+    border: 1px solid #eadbce;
+    border-radius: 30px;
+    padding: 25px 20px;
+    box-shadow: 0 12px 30px rgba(120, 80, 50, 0.06);
+}
+
+.painel-card-titulo {
+    color: #c83c35;
+    font-size: 11px;
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+
+.painel-card h2 {
+    font-size: 38px;
+    margin: 20px 0 5px;
+}
+
+.painel-card p {
+    font-size: 12px;
+    color: #655d56;
+}
+
+.painel-divider {
+    height: 12px;
+    background: #f3eae1;
+    border-radius: 20px;
+    margin: 18px 0 40px;
+}
+
+/* GRID PRINCIPAL */
+
+.painel-dashboard-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.painel-box {
+    background: #fffdfb;
+    border: 1px solid #eadbce;
+    border-radius: 32px;
+    padding: 30px;
+    box-shadow: 0 12px 30px rgba(120, 80, 50, 0.05);
+}
+
+.painel-box h2,
+.painel-sugestoes h2 {
+    font-size: 25px;
+    margin: 0 0 18px;
+    color: #171412;
+}
+
+.painel-box-desc {
+    font-size: 13px;
+    color: #655d56;
+    margin-bottom: 25px;
+}
+
+/* FORMULÁRIO */
+
+.painel-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.painel-form-row {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 12px;
+}
+
+.painel-form input,
+.painel-form select,
+.painel-form textarea {
+    width: 100%;
+    border: 1px solid #eadbce;
+    border-radius: 20px;
+    padding: 15px 18px;
+    background: #fffdfb;
+    font-family: inherit;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.painel-form textarea {
+    resize: vertical;
+}
+
+.painel-btn-dark {
+    background: #171412;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 15px 25px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    width: fit-content;
+}
+
+/* HÁBITOS */
+
+.painel-habitos {
+    display: flex;
+    flex-direction: column;
+}
+
+.painel-habito {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 0;
+    border-bottom: 1px solid #f0e3d8;
+}
+
+.painel-habito:last-child {
+    border-bottom: none;
+}
+
+.habito-icon {
+    width: 60px;
+    height: 60px;
+    background: #ffedcf;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.habito-icon svg {
+    width: 27px;
+    height: 27px;
+    color: #171412;
+}
+
+.painel-habito strong {
+    font-size: 14px;
+}
+
+.painel-habito p {
+    font-size: 12px;
+    color: #655d56;
+    margin: 7px 0 0;
+}
+
+/* ROTINA */
+
+.painel-rotina {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.rotina-item span {
+    font-size: 13px;
+}
+
+.rotina-linha {
+    width: 100%;
+    height: 11px;
+    background: #f3eae1;
+    border-radius: 20px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.rotina-progresso {
+    width: 0%;
+    height: 100%;
+    background: #c83c35;
+    border-radius: 20px;
+}
+
+/* SUGESTÕES */
+
+.painel-sugestoes {
+    margin-top: 35px;
+    background: #fffdfb;
+    border: 1px solid #eadbce;
+    border-radius: 32px;
+    padding: 30px;
+    box-shadow: 0 12px 30px rgba(120, 80, 50, 0.05);
+}
+
+.painel-sugestoes-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.painel-sugestoes-header p {
+    color: #655d56;
+    font-size: 13px;
+}
+
+.painel-sugestoes-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.sugestao-card {
+    background: #ffedcf;
+    border-radius: 25px;
+    padding: 22px;
+}
+
+.sugestao-card h3 {
+    font-size: 14px;
+    margin: 0 0 12px;
+}
+
+.sugestao-card p {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #655d56;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 900px) {
+    .painel-indicadores {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .painel-dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .painel-sugestoes-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .painel-container {
+        padding: 35px 20px;
+    }
+
+    .painel-intro h1 {
+        font-size: 42px;
+    }
+
+    .painel-indicadores {
+        grid-template-columns: 1fr;
+    }
+
+    .painel-form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .painel-sugestoes-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .painel-sugestoes-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* =========================
+   SUGESTÕES - MODELO
+========================= */
+
+.painel-sugestoes {
+    margin-top: 35px;
+    background: #fffdfb;
+    border: 1px solid #eadbce;
+    border-radius: 32px;
+    padding: 28px;
+    box-shadow: 0 12px 30px rgba(120, 80, 50, 0.05);
+}
+
+.painel-sugestoes-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.painel-sugestoes-header h2 {
+    margin-bottom: 8px;
+}
+
+.painel-sugestoes-header p {
+    margin: 0;
+    font-size: 13px;
+    color: #655d56;
+}
+
+.painel-sugestoes-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+}
+
+.sugestao-card {
+    background: #ffedcf;
+    border-radius: 24px;
+    padding: 22px 20px;
+    min-height: 120px;
+}
+
+.sugestao-card h3 {
+    margin: 0 0 12px;
+    font-size: 14px;
+}
+
+.sugestao-card p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.6;
+    color: #655d56;
+}
+
+
+/* =========================
+   GRÁFICO
+========================= */
+
+.painel-grafico {
+    min-height: 350px;
+}
+
+.grafico-container {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 15px;
+}
+
+.grafico-svg {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.grafico-svg text {
+    fill: #655d56;
+    font-family: inherit;
+    font-size: 12px;
+}
+
+.grafico-legenda {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 15px;
+    font-size: 12px;
+    color: #655d56;
+}
+
+.grafico-legenda-ponto {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #c83c35;
+}
+
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 900px) {
+    .painel-sugestoes-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .painel-sugestoes-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .painel-sugestoes-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .painel-sugestoes {
+        padding: 22px;
+    }
+}
+/* =========================
+   SUGESTÕES - ESTILO DA REFERÊNCIA
+========================= */
+
+.painel-sugestoes {
+    margin-top: 35px;
+    background: #fffdfb;
+    border: 1px solid #eadbce;
+    border-radius: 32px;
+    padding: 28px 24px;
+    box-shadow: 0 12px 30px rgba(120, 80, 50, 0.05);
+}
+
+.painel-sugestoes-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.painel-sugestoes-header h2 {
+    font-size: 30px;
+    margin: 0 0 8px;
+}
+
+.painel-sugestoes-header p {
+    font-size: 14px;
+    margin: 0;
+    color: #655d56;
+}
+
+.painel-sugestoes-header .painel-btn-dark {
+    padding: 15px 28px;
+    border-radius: 50px;
+    white-space: nowrap;
+}
+
+/* CARTÕES */
+
+.painel-sugestoes-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.sugestao-card {
+    background: #ffedcf;
+    border-radius: 25px;
+    padding: 22px 18px;
+    min-height: 100px;
+}
+
+.sugestao-card h3 {
+    font-size: 15px;
+    margin: 0 0 12px;
+}
+
+.sugestao-card p {
+    font-size: 14px;
+    line-height: 1.55;
+    margin: 0;
+    color: #655d56;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 900px) {
+    .painel-sugestoes-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .painel-sugestoes {
+        padding: 22px;
+    }
+
+    .painel-sugestoes-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .painel-sugestoes-header h2 {
+        font-size: 25px;
+    }
+
+    .painel-sugestoes-grid {
+        grid-template-columns: 1fr;
+    }
+}
